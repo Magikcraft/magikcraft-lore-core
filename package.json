@@ -1,0 +1,27 @@
+{
+  "name": "magikcraft-spells-core",
+  "version": "1.0.0",
+  "description": "The core Magikcraft spells",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Magikcraft/magikcraft-spells-core.git"
+  },
+  "keywords": [
+    "Magikcraft",
+    "JavaScript",
+    "Minecraft"
+  ],
+  "author": "Magikcraft.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Magikcraft/magikcraft-spells-core/issues"
+  },
+  "homepage": "https://github.com/Magikcraft/magikcraft-spells-core#readme",
+  "devDependencies": {
+    "typescript": "2.4"
+  }
+}
