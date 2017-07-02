@@ -13,7 +13,7 @@ You need Node.js installed on your computer. Node.js is JavaScript that runs out
 
 0. Create a new npm package:
 
-``mkdir my-cool-api
+```mkdir my-cool-api
 cd my-cool-api
 npm init
 ```
