@@ -7,6 +7,7 @@ export interface BukkitPlayer {
     getTargetBlock(blockType: null|BukkitBlockType, distance: number): BukkitBlock;
     launchProjectile(projectileType: any): void;
     isSneaking(): boolean;
+    setGameMode(mode: string): void;
     setWalkSpeed(speed: number): void;
     getInventory(): BukkitInventory;
     playerListName: string;
@@ -17,7 +18,7 @@ export interface BukkitInventory {
 }
 
 export interface BukkitItemStack {
-    
+
 }
 
 export interface BukkitWorld {
