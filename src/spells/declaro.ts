@@ -6,7 +6,7 @@ const allowedItems: any = {
 
 export const name = 'declaro';
 export const cost = 1;
-export const spell = (canon: ICanon) => (item: string) => {
+export const code = (canon: ICanon) => (item: string) => {
     var MSG = canon.MSG;
 
     const manifest = (item: string) => {

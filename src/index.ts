@@ -11,11 +11,11 @@ export const description = "The core Magikcraft API spells";
 
 export const spells = [
     aspecto,
-    auxilium,
-    caldarium,
-    celeritate,
-    declaro,
-    dixit,
-    doNTimes,
-    volare,
+//    auxilium,
+ //   caldarium,
+//    celeritate,
+//    declaro,
+//    dixit,
+ //   doNTimes,
+ //   volare,
 ];

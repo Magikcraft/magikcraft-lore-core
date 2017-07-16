@@ -2,7 +2,7 @@ import { ICanon } from '../magikcraft-types/canon';
 
 export const name = 'caldarium';
 export const cost = 0;
-export const spell = (canon: ICanon) => (ingredients: string[]) => {
+export const code = (canon: ICanon) => (ingredients: string[]) => {
 
     const MSG = canon.MSG;
     const items: any = {

@@ -5,7 +5,7 @@ var allowedItems = {
 };
 exports.name = 'declaro';
 exports.cost = 1;
-exports.spell = function (canon) { return function (item) {
+exports.code = function (canon) { return function (item) {
     var MSG = canon.MSG;
     var manifest = function (item) {
         var MATERIAL = Java.type("org.bukkit.Material");

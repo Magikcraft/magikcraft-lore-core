@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.spell = function (canon) { return function (msg, whom) {
+exports.code = function (canon) { return function (msg, whom) {
     var log = canon.console.log;
     var audience = (typeof whom !== "undefined") ? canon.plugin.getServer().getPlayer(whom) : canon.sender;
     log.info("About to say");

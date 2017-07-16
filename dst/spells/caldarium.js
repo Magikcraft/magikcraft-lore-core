@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.name = 'caldarium';
 exports.cost = 0;
-exports.spell = function (canon) { return function (ingredients) {
+exports.code = function (canon) { return function (ingredients) {
     var MSG = canon.MSG;
     var items = {
         "LIZARDEYES": 1,

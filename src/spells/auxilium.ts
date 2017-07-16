@@ -2,7 +2,7 @@ import { ICanon } from '../magikcraft-types/canon';
 
 export const name = 'auxilium';
 export const cost = 0;
-export const spell = (canon: ICanon) => (playerName?: string) => {
+export const code = (canon: ICanon) => (playerName?: string) => {
     const sender = canon.sender;
     var MSG = canon.MSG;
 

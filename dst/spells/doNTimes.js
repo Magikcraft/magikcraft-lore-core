@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.name = 'doNTimes';
 exports.cost = 0;
-exports.spell = function (canon) {
+exports.code = function (canon) {
     function doNTimes(action, nTimes, delay, callback) {
         var maxN = 10;
         var minDelay = 100;

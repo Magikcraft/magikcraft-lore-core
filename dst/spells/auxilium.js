@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.name = 'auxilium';
 exports.cost = 0;
-exports.spell = function (canon) { return function (playerName) {
+exports.code = function (canon) { return function (playerName) {
     var sender = canon.sender;
     var MSG = canon.MSG;
     if (typeof playerName === "undefined") {

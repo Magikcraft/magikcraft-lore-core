@@ -2,7 +2,7 @@ import { ICanon } from '../magikcraft-types/canon';
 
 export const name = 'doNTimes';
 export const cost = 0;
-export const spell = (canon: ICanon) => {
+export const code = (canon: ICanon) => {
     function doNTimes(action: ()=> void, nTimes: number, delay: number, callback?: () => void){
 
         var maxN = 10;
