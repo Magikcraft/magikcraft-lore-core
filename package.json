@@ -1,5 +1,5 @@
 {
-  "name": "magikcraft-spells-core",
+  "name": "magikcraft-lore-core",
   "version": "1.0.0",
   "description": "The core Magikcraft spells",
   "main": "index.js",
