@@ -1,5 +1,8 @@
 import { ICanon } from '../magikcraft-types/canon';
 
+/**
+* EXAMPLE ONLY - DO NOT INCLUDE IN INDEX
+*/
 const maxDuration = 500;
 export const name = 'volare';
 export const cost = 0;

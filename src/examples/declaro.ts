@@ -1,5 +1,8 @@
 import { ICanon } from '../magikcraft-types/canon';
 
+/**
+* EXAMPLE ONLY - DO NOT INCLUDE IN INDEX
+*/
 const allowedItems: any = {
     "ELYTRA": "ELYTRA"
 };

@@ -1,5 +1,8 @@
 import { ICanon } from '../magikcraft-types/canon';
 
+/**
+* EXAMPLE ONLY - DO NOT INCLUDE IN INDEX
+*/
 export const code = (canon: ICanon) => (msg: string, whom?: string) => {
     const log = canon.console.log;
     const audience = (typeof whom !== "undefined") ? canon.plugin.getServer().getPlayer(whom) : canon.sender;

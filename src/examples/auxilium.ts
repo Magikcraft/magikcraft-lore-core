@@ -1,4 +1,7 @@
 import { ICanon } from '../magikcraft-types/canon';
+/**
+ * EXAMPLE ONLY - DO NOT INCLUDE IN INDEX
+ */
 
 export const name = 'auxilium';
 export const cost = 0;

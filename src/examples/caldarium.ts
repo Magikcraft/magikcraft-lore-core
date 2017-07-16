@@ -1,5 +1,8 @@
 import { ICanon } from '../magikcraft-types/canon';
 
+/**
+* EXAMPLE ONLY - DO NOT INCLUDE IN INDEX
+*/
 export const name = 'caldarium';
 export const cost = 0;
 export const code = (canon: ICanon) => (ingredients: string[]) => {
