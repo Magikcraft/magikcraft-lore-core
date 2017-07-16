@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/Magikcraft/magikcraft-spells-core#readme",
   "devDependencies": {
+    "husky": "^0.14.3",
     "typescript": "2.4"
+  },
+  "dependencies": {
   }
 }

@@ -53,6 +53,7 @@ export interface BukkitBlock {
     getType(): BukkitBlockType;
     getRelative(x: number, y: number, z: number): BukkitBlock;
     setType(newType: BukkitBlockType): void;
+    getLocation(): BukkitLocation;
 }
 
 export interface BukkitBlockType {

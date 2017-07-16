@@ -1,6 +1,6 @@
 import { ICanon } from '../magikcraft-types/canon';
 
-export const dixit = (canon: ICanon) => (msg: string, whom?: string) => {
+export const spell = (canon: ICanon) => (msg: string, whom?: string) => {
     const log = canon.console.log;
     const audience = (typeof whom !== "undefined") ? canon.plugin.getServer().getPlayer(whom) : canon.sender;
 
@@ -21,3 +21,7 @@ export const dixit = (canon: ICanon) => (msg: string, whom?: string) => {
         audience.sendMessage(_msg);
     }
 };
+
+export const name = 'dixit';
+
+export const cost = 0;

@@ -1,6 +1,8 @@
 import { ICanon } from '../magikcraft-types/canon';
 
-export const caldarium = (canon: ICanon) => (ingredients: string[]) => {
+export const name = 'caldarium';
+export const cost = 0;
+export const spell = (canon: ICanon) => (ingredients: string[]) => {
 
     const MSG = canon.MSG;
     const items: any = {
@@ -23,7 +25,7 @@ export const caldarium = (canon: ICanon) => (ingredients: string[]) => {
         celeritate: "magik.celeritate"
     };
 
-    function mix(ingredients: string[], MSG) {
+    function mix(ingredients: string[], MSG: any) {
         if (typeof ingredients == "string") return MSG.CALDARIUM_NEEDARRAY;
         if (!ingredients || ingredients.toString() !== "[object Array]" || ingredients.length < 3) {
             return MSG.CALDARIUM_INSUFFICIENT;
