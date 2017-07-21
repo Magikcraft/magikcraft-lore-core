@@ -1,4 +1,4 @@
-# magikcraft-spells-core
+# magikcraft-lore-core
 
 The Core spells for the Magikcraft API
 
