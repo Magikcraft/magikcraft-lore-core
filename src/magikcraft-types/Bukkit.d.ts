@@ -6,11 +6,18 @@ export interface BukkitPlayer {
     getLineOfSight(blocks: BukkitMaterial[], maxDistance: number): BukkitBlock[];
     getTargetBlock(blockType: null|BukkitBlockType, distance: number): BukkitBlock;
     launchProjectile(projectileType: any): void;
+    setVelocity(vector: BukkitVector): void;
     isSneaking(): boolean;
     setGameMode(mode: string): void;
     setWalkSpeed(speed: number): void;
     getInventory(): BukkitInventory;
+    sendMessage(msg: string): void;
+    teleport(location: BukkitLocation): void;
     playerListName: string;
+}
+
+export interface BukkitVector {
+
 }
 
 export interface BukkitInventory {

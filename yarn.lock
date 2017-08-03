@@ -1412,6 +1412,10 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
+magikcraft.io@^0.9.8:
+  version "0.9.8"
+  resolved "https://registry.yarnpkg.com/magikcraft.io/-/magikcraft.io-0.9.8.tgz#a5bbdab110aa5c496e2f850c5dc4dc93b20341f2"
+
 makeerror@1.0.x:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/makeerror/-/makeerror-1.0.11.tgz#e01a5c9109f2af79660e4e8b9587790184f5a96c"

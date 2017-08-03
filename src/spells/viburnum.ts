@@ -11,10 +11,7 @@ export const code = (canon: ICanon) => () => {
     };
 
     return function viburnum(i = 0) {
-        canon.magik.setTimeout(function() {
-            snowball();
-        }, 200 * i);
+        canon.magik.setTimeout(() => snowball(), 200 * i);
         canon.magik.dixit(`Snowball!`);
     }
-
 };
