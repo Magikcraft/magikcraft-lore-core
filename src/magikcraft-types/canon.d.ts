@@ -1,15 +1,16 @@
 import { BukkitPlayer } from './Bukkit';
 
 export interface ICanon {
-    sender: BukkitPlayer,
-    plugin: any;
-    magik: any,
     _darkmagik_: any;
-    localiseMsg: any;
-    MSG: any;
-    constant: any;
     console: any;
-    players: any;
+    constant: any;
     globalLocale: string,
     http: any;
+    localiseMsg: any;
+    log: any,
+    magik: any,
+    MSG: any;
+    players: any;
+    plugin: any;
+    sender: BukkitPlayer,
 }

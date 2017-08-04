@@ -1,0 +1,10 @@
+import * as aspecto from './spells/aspecto';
+import * as doNTimes from './spells/doNTimes';
+import * as exmemento from './spells/exmemento';
+import * as exsultus from './spells/exsultus';
+import * as ianuae from './spells/ianuae';
+import * as memento from './spells/memento';
+import * as test123 from './spells/test123';
+import * as viburnum from './spells/viburnum';
+export declare const description = "The core Magikcraft API spells";
+export declare const loreToLoad: (typeof aspecto | typeof doNTimes | typeof exmemento | typeof exsultus | typeof ianuae | typeof memento | typeof test123 | typeof viburnum)[];

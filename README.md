@@ -80,10 +80,11 @@ cd spells
 3. In the `volare.ts` file write this:
 
 ```
-export const volare = (canon) => () => {}
+export const name = 'volare';
+export const code = (canon) => () => {}
 ```
 
-This is the basic structure of a Magikcraft API. You `export` a constant (`const`) which has the name of your spell - in this case 'volare'. That constant is (the equals sign "=" means "is") a function that takes a canon and returns another function.
+This is the basic structure of a Magikcraft API. You `export` a constant (`const`) which has the name of your spell - in this case 'volare'. You also export the code for the spell. That constant is (the equals sign "=" means "is") a function that takes a canon and returns another function.
 
 Don't worry if you don't understand what those symbols mean. That's the mystery of magic! You will be able to conjour things up from nothing as you master it.
 
@@ -97,7 +98,7 @@ export function volare (canon) {
 }
 ```
 
-You have one function that returns another function, which is the actual spell. You will not understand what I am about to tell you. Don't worry. This is magic.
+You have one function that returns another function, which is the actual spell. You may not understand what I am about to tell you. Don't worry. This is magic.
 
 The purpose of the outer function is to create a "closure". Think of it like a spaceship. When you go out into space, you are in a small ship with an atmosphere and some water and some food. The closure is like that. When your spell is loaded by Magikcraft it will take some stuff with it that Magikcraft will add to it. That's the "canon" part. Magikcraft puts the canon into the spell for you.
 
@@ -116,6 +117,6 @@ export const volare = (canon) => (duration) => {}
 
 OK, so now you have a spell that takes a canon from Magikcraft and returns another spell that takes a duration. Now let's add some types.
 
-5. Because you imported the `magikcraft-types` package, and you're using Visual Studio Code, you can get the editor to fill in some of the information for you. In Visual Studio Code you should add the extension "TypeScript Hero". Search around for extensions, and when you find them, load "TypeScript Hero". 
+5. Because you imported the `magikcraft.io` package, and you're using Visual Studio Code, you can get the editor to fill in some of the information for you. In Visual Studio Code you should add the extension "TypeScript Hero". Search around for extensions, and when you find them, load "TypeScript Hero".
 
 Now put your cursor over `canon` and click it. Then, open the Command Palette. On my Mac I press Command-Shift-P - or I can get to it via `View > Command Palette`. In command palette type 'Import'. If you have TypeScript Hero installed, you'll have an option for 'TS Hero: Adds the current symbol under the cursor as an import to current file.'
