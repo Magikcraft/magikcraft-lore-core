@@ -19,5 +19,6 @@ import * as shakti from './lore/shakti';
 import * as stella from './lore/stella';
 import * as test123 from './lore/test123';
 import * as viburnum from './lore/viburnum';
+import * as volare from './lore/volare';
 export declare const description = "The core Magikcraft API spells";
-export declare const loreToLoad: (typeof aspecto | typeof auxilium | typeof celeritate | typeof dixit | typeof doNTimes | typeof exmemento | typeof exsultus | typeof hic | typeof iacta | typeof ianuae | typeof incendium | typeof infierno | typeof memento | typeof noxvida | typeof radiatum | typeof random | typeof satio | typeof shakti | typeof stella | typeof test123 | typeof viburnum)[];
+export declare const loreToLoad: (typeof aspecto | typeof auxilium | typeof celeritate | typeof dixit | typeof doNTimes | typeof exmemento | typeof exsultus | typeof hic | typeof iacta | typeof ianuae | typeof incendium | typeof infierno | typeof memento | typeof noxvida | typeof radiatum | typeof random | typeof satio | typeof shakti | typeof stella | typeof test123 | typeof viburnum | typeof volare)[];

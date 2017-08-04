@@ -4,6 +4,8 @@ The Core spells for the Magikcraft API
 
 ## How to create a new Lore API for Magikcraft
 
+Refer to the [Lore package specification](https://github.com/Magikcraft/product-board/issues/8) for details on the shape of a Magikcraft API-compatible lore package.
+
 ### Prerequisites
 
 I recommend that you use Visual Studio Code. You can use anything you want, but I'm going to give instructions for Visual Studio Code here. Go to [code.visualstudio.com](https://code.visualstudio.com) to install it.
