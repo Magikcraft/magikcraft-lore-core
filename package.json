@@ -5,7 +5,8 @@
   "main": "dst/index.js",
   "scripts": {
     "test": "jest",
-    "watch": "tsc -p tsconfig.json --watch"
+    "watch": "tsc -p tsconfig.json --watch",
+    "precommit": "tsc -p tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,7 @@
     "Minecraft"
   ],
   "author": "Magikcraft.io",
-  "license": "ISC",
+  "license": "AGPL",
   "bugs": {
     "url": "https://github.com/Magikcraft/magikcraft-spells-core/issues"
   },

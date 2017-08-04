@@ -8,6 +8,7 @@ export interface BukkitPlayer {
     launchProjectile(projectileType: any): void;
     setVelocity(vector: BukkitVector): void;
     isSneaking(): boolean;
+    setFoodLevel(level: number): void;
     setGameMode(mode: string): void;
     setWalkSpeed(speed: number): void;
     getInventory(): BukkitInventory;
