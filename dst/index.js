@@ -21,6 +21,7 @@ var shakti = require("./lore/shakti");
 var stella = require("./lore/stella");
 var test123 = require("./lore/test123");
 var viburnum = require("./lore/viburnum");
+var volare = require("./lore/volare");
 exports.description = "The core Magikcraft API spells";
 exports.loreToLoad = [
     aspecto,
@@ -43,5 +44,6 @@ exports.loreToLoad = [
     shakti,
     stella,
     test123,
-    viburnum
+    viburnum,
+    volare
 ];
