@@ -1,4 +1,4 @@
-import { ICanon } from '../magikcraft-types/canon';
+import { ICanon } from 'magikcraft.io';
 
 /**
  * Exmemento is a memory storage getter, modelled on localStorage.getItem.

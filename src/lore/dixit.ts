@@ -1,4 +1,4 @@
-import { ICanon } from '../magikcraft-types/canon';
+import { ICanon } from 'magikcraft.io';
 
 /**
  * Dixit displays a message in a player's console - by default the current player. It can be used to send messages to other players by passing in the second optional argument, a player name.

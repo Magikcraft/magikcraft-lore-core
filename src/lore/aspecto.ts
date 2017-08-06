@@ -1,5 +1,4 @@
-import { BukkitLocation } from '../magikcraft-types/Bukkit';
-import { ICanon } from '../magikcraft-types/canon';
+import { BukkitLocation, ICanon } from 'magikcraft.io';
 
 export const name = 'aspecto';
 export const cost = 0;
