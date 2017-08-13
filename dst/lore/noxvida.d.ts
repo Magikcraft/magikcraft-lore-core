@@ -1,4 +1,4 @@
-import { ICanon } from '../magikcraft-types/canon';
+import { ICanon } from 'magikcraft.io';
 /**
  * Demonstrates how to apply a potion effect to the player.
  */

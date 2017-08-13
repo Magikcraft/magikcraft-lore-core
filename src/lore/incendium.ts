@@ -1,4 +1,4 @@
-import { ICanon } from '../magikcraft-types/canon';
+import { ICanon } from 'magikcraft.io';
 
 const DEFAULT_FIRE_DURATION = 8; // 8 seconds
 const TICKS_PER_SECOND = 20;

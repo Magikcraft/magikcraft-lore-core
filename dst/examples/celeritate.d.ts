@@ -1,4 +1,4 @@
-import { ICanon } from '../magikcraft-types/canon';
+import { ICanon } from 'magikcraft.io';
 /**
 * EXAMPLE ONLY - DO NOT INCLUDE IN INDEX
 */

@@ -1,5 +1,5 @@
-import { BukkitLocation } from '../magikcraft-types/Bukkit';
-import { ICanon } from '../magikcraft-types/canon';
+import { BukkitLocation } from 'magikcraft.io';
+import { ICanon } from 'magikcraft.io';
 
 export const name = 'hic';
 export const cost = 0;

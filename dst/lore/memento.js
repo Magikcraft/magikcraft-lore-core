@@ -1,23 +1,36 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * Memento is a memory storage setter, modelled after localStorage.setItem.
- * It takes a key and a value. If no key is supplied, then the key '__default' is used.
- */
 exports.name = 'memento';
 exports.cost = 0;
-exports.code = function (canon) { return function (key, value) {
-    var msg = canon.magik.msg;
+exports.code = function (canon) {
     var MSG = canon.MSG;
-    if (!value) {
-        value = key;
-        key = '__default';
+    function getItem(key) {
+        if (!global.mementii) {
+            global.mementii = {};
+        }
+        return global.mementii[key];
     }
-    canon.magik.mementii[key] = value;
-    if (value instanceof Java.type("org.bukkit.Location")) {
-        canon.sender.sendMessage(msg(MSG.MEMENTO_PLACE));
+    function _setItem(key, value) {
+        if (!value) {
+            value = key;
+            key = '__default';
+        }
+        if (!global.mementii) {
+            global.mementii = {};
+        }
+        global.mementii[key] = value;
+        if (value instanceof Java.type("org.bukkit.Location")) {
+            canon.displayLocalMsg("I remembered this place");
+        }
+        else {
+            canon.displayLocalMsg("I remember that!");
+        }
     }
-    else {
-        canon.sender.sendMessage(msg(MSG.MEMENTO_SPECIFIC));
-    }
-}; };
+    var _localStorage = _setItem;
+    // What is this madness? 100% backward-compatibility.
+    // The exported object has the same signature as the old memento, and now also
+    // has setItem and getItem methods.
+    _localStorage.setItem = _setItem;
+    _localStorage.getItem = getItem;
+    return _localStorage;
+};

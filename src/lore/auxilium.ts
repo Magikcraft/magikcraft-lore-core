@@ -1,15 +1,16 @@
-import { ICanon } from '../magikcraft-types/canon';
+import { ICanon } from 'magikcraft.io';
 export const name = 'auxilium';
 export const cost = 0;
 export const code = (canon: ICanon) => (playerName: string) => {
     var MSG = canon.MSG;
 
     if (typeof playerName === "undefined") {
-        return canon.magik.msg(MSG.AUXILIUM_PLAYERNAME_REQUIRED);
+        canon.displayLocalMsg('You need to give a player name!');
+        return
     }
 
     if (canon.sender.playerListName == playerName) {
-        canon.magik.msg(MSG.AUXILIUM_SELFHEAL_DISALLOWED);
+        canon.displayLocalMsg("You cannot heal yourself!");
         return;
     }
 

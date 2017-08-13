@@ -1,5 +1,4 @@
-import { BukkitLocation } from '../magikcraft-types/Bukkit';
-import { ICanon } from '../magikcraft-types/canon';
+import { BukkitLocation, ICanon } from 'magikcraft.io';
 /**
  * Ianuae teleports the player to a given location.
  */
