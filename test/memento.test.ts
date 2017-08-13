@@ -1,7 +1,5 @@
 declare const require: any;
-
 import * as _memento from '../src/lore/memento';
-import * as mio from 'magikcraft.io';
 
 const mock = require('magikcraft.io').mock;
 
@@ -12,6 +10,11 @@ describe('memento', () => {
     });
     test('has a getItem method', () => {
         expect(memento.getItem).toBeTruthy();
+    });
+    test('Can set and get', () => {
+        memento.setItem('test', 1);
+        const value = memento.getItem('test');
+        expect(value).toBe(1);
     });
 });
 

@@ -1,3 +1,4 @@
+declare const global: any;
 import { ICanon } from 'magikcraft.io';
 
 /**
@@ -11,23 +12,28 @@ export interface ILocalStorage {
 export const name = 'memento';
 export const cost = 0;
 export const code = (canon: ICanon): ILocalStorage => {
-    var msg = canon.magik.msg;
-    var MSG = canon.MSG;
+    const MSG = canon.MSG;
 
     function getItem(key: string) {
-        return canon.magik.mementii[key];
+        if (!global.mementii) {
+            global.mementii = {};
+        }
+        return global.mementii[key];
     }
     function _setItem(key: string, value: any) {
         if (!value) {
             value = key;
             key = '__default';
         }
-        canon.magik.mementii[key] = value;
+        if (!global.mementii) {
+            global.mementii = {};
+        }
+        global.mementii[key] = value;
 
         if (value instanceof Java.type("org.bukkit.Location")) {
-            canon.sender.sendMessage(msg(MSG.MEMENTO_PLACE));
+            canon.displayLocalMsg("I remembered this place");
         } else {
-            canon.sender.sendMessage(msg(MSG.MEMENTO_SPECIFIC));
+            canon.displayLocalMsg("I remember that!");
         }
     }
     const _localStorage: ILocalStorage = (_setItem as any);
@@ -38,15 +44,3 @@ export const code = (canon: ICanon): ILocalStorage => {
     _localStorage.getItem = getItem;
     return _localStorage;
 };
-
-/*
-fetch('program.wasm')
-    .then( response => response.arrayBuffer())
-    .then( bytes => WebAssembly.compile(bytes))
-    .then( wasmModule => WebAssembly.instantiate(wasmModule, {
-        env: { printf: console.log }
-    }))
-    .then( results => {
-        results.exports.main();
-    });
-*/

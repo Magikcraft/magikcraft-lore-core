@@ -5,10 +5,11 @@ exports.cost = 0;
 exports.code = function (canon) { return function (playerName) {
     var MSG = canon.MSG;
     if (typeof playerName === "undefined") {
-        return canon.magik.msg(MSG.AUXILIUM_PLAYERNAME_REQUIRED);
+        canon.displayLocalMsg('You need to give a player name!');
+        return;
     }
     if (canon.sender.playerListName == playerName) {
-        canon.magik.msg(MSG.AUXILIUM_SELFHEAL_DISALLOWED);
+        canon.displayLocalMsg("You cannot heal yourself!");
         return;
     }
     var player = canon.plugin.getServer().getPlayer(playerName);

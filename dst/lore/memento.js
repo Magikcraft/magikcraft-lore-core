@@ -3,22 +3,27 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.name = 'memento';
 exports.cost = 0;
 exports.code = function (canon) {
-    var msg = canon.magik.msg;
     var MSG = canon.MSG;
     function getItem(key) {
-        return canon.magik.mementii[key];
+        if (!global.mementii) {
+            global.mementii = {};
+        }
+        return global.mementii[key];
     }
     function _setItem(key, value) {
         if (!value) {
             value = key;
             key = '__default';
         }
-        canon.magik.mementii[key] = value;
+        if (!global.mementii) {
+            global.mementii = {};
+        }
+        global.mementii[key] = value;
         if (value instanceof Java.type("org.bukkit.Location")) {
-            canon.sender.sendMessage(msg(MSG.MEMENTO_PLACE));
+            canon.displayLocalMsg("I remembered this place");
         }
         else {
-            canon.sender.sendMessage(msg(MSG.MEMENTO_SPECIFIC));
+            canon.displayLocalMsg("I remember that!");
         }
     }
     var _localStorage = _setItem;
@@ -29,14 +34,3 @@ exports.code = function (canon) {
     _localStorage.getItem = getItem;
     return _localStorage;
 };
-/*
-fetch('program.wasm')
-    .then( response => response.arrayBuffer())
-    .then( bytes => WebAssembly.compile(bytes))
-    .then( wasmModule => WebAssembly.instantiate(wasmModule, {
-        env: { printf: console.log }
-    }))
-    .then( results => {
-        results.exports.main();
-    });
-*/ 
