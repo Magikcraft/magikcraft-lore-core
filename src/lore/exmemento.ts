@@ -1,3 +1,4 @@
+declare const global: any;
 import { ICanon } from 'magikcraft.io';
 
 /**
@@ -7,5 +8,5 @@ import { ICanon } from 'magikcraft.io';
 export const name = 'exmemento';
 export const cost = 0;
 export const code = (canon: ICanon) => (key = '__default'): any => {
-    return canon.magik.mementii[key];
+    return global.mementii[key];
 };
