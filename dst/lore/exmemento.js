@@ -8,5 +8,5 @@ exports.name = 'exmemento';
 exports.cost = 0;
 exports.code = function (canon) { return function (key) {
     if (key === void 0) { key = '__default'; }
-    return canon.magik.mementii[key];
+    return global.mementii[key];
 }; };
