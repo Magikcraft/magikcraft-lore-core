@@ -34,6 +34,7 @@ export const loreToLoad = [
     doNTimes,
     exmemento,
     exsultus,
+    fromJSON,
     hic,
     iacta,
     ianuae,
@@ -47,6 +48,7 @@ export const loreToLoad = [
     shakti,
     stella,
     test123,
+    toJSON,
     viburnum,
     volare
 ];
