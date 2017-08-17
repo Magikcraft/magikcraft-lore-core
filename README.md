@@ -1,124 +1,68 @@
-# magikcraft-spells-core
+# The Core Lore for the Magikcraft API
 
-The Core spells for the Magikcraft API
+## toJSON and fromJSON
 
-## How to create a new Lore API for Magikcraft
+Added: Thursday 17 August
 
-Refer to the [Lore package specification](https://github.com/Magikcraft/product-board/issues/8) for details on the shape of a Magikcraft API-compatible lore package.
+The helper methods `magik.toJSON` and `magik.fromJSON` serialise Java types to/from JSON for transport or storage.
 
-### Prerequisites
+At the moment the only supported Java type is a `BukkitLocation`. You can use this to publish a BukkitLocation over the eventbus, and to consume a BukkitLocation from the eventbus.
 
-I recommend that you use Visual Studio Code. You can use anything you want, but I'm going to give instructions for Visual Studio Code here. Go to [code.visualstudio.com](https://code.visualstudio.com) to install it.
-
-You need Node.js installed on your computer. Node.js is JavaScript that runs outside your web browser. We use it to build Magikcraft.
-## Let's Do This!
-
-0. Create a new npm package:
-
-```mkdir my-cool-api
-cd my-cool-api
-npm init
-```
-
-1. Now make it a TypeScript project, because 2017:
+Here is an example:
 
 ```
-yarn add --dev typescript@2.4
-tsc --init
-```
+const magik = magikcraft.io;
+const locationTopic = 'locations';
 
-2. Now make it a Git repository, because the future:
+// Publish my location over the eventbus
+function pubLocation() {
+    const here = magik.hic(); // get player current location
+    const hereJSON = magik.toJSON(here); // turn it into a JSON object
+    magik.dixit(JSON.stringify(hereJSON)); // you can print it out
 
-```
-git init
-```
-
-3. Now make an output directory in the project for the JavaScript to go into:
-```
-mkdir dst
-```
-
-4. Edit the `tsconfig.json` file to make this the output directory:
-
-```
- "outDir": "./dst"
- ```
-
-5. Now make an input directory, `src`:
-
-```
-mkdir src
-```
-
-6. Now install the Magikcraft type library:
-
-```
-yarn add magikcraft-types
-```
-
-7. Now it's time to start coding.
-
-Create a file `index.ts` in the `/src` folder. Your package will be loaded by the Magikcraft module loader in the server. You should export a description, a name, and an array of spells. Make it look like this, substituting your own API name:
-
-```
-export name = "My Cool API";
-export description = "Literally, the best API of all time, anywhere.";
-export spells = [];
-```
-
-## Writing magik.volare
-
-Let's start off by writing the spell `magik.volare`. This is literally how it is written in the Magikcraft API.
-
-1. Make a new folder inside `src` called `spells`:
-
-```
-mkdir spells
-cd spells
-```
-
-2. Now make a file called `volare.ts`. You can use the "add file" and add "folder" buttons to make files and folders. After a while of coding you might find it faster to keep using your keyboard. You decide.
-
-3. In the `volare.ts` file write this:
-
-```
-export const name = 'volare';
-export const code = (canon) => () => {}
-```
-
-This is the basic structure of a Magikcraft API. You `export` a constant (`const`) which has the name of your spell - in this case 'volare'. You also export the code for the spell. That constant is (the equals sign "=" means "is") a function that takes a canon and returns another function.
-
-Don't worry if you don't understand what those symbols mean. That's the mystery of magic! You will be able to conjour things up from nothing as you master it.
-
-Another way of writing that spell is like this:
-
-```
-export function volare (canon) {
-    return function () {
-
-    }
+    // Publish player location to 'locations' topic on the eventbus
+    eventbus.publish(locationTopic, {name: global.PlayerName, location: hereJSON});
 }
 ```
 
-You have one function that returns another function, which is the actual spell. You may not understand what I am about to tell you. Don't worry. This is magic.
+```
+const magik = magikcraft.io;
+const locationTopic = 'locations';
 
-The purpose of the outer function is to create a "closure". Think of it like a spaceship. When you go out into space, you are in a small ship with an atmosphere and some water and some food. The closure is like that. When your spell is loaded by Magikcraft it will take some stuff with it that Magikcraft will add to it. That's the "canon" part. Magikcraft puts the canon into the spell for you.
+// Consume player locations from eventbus
+function subLocation(){
 
-OK, onwards!
+    // Create a local location registry
+    if (!global.locations) {
+        global.locations = {};
+    }
 
-4. We will use the terse syntax. It's the way that master magicians write code in 2017. It's like the difference between writing a whole sentence or using an emoji. Hieroglyphics are cool - so make your spell look like this:
+    eventbus.subscribe(locationTopic, event => {
+        const who = event.data.name;
+        const where = event.data.location;
+        global.locations[who] = where;
+    });
+}
+```
+
+Here is a teleport spell that uses the eventbus published locations to teleport to the last published location for a player:
 
 ```
-export const volare = (canon) => () => {}
+const magik = magikcraft.io;
+
+function tp2p(name){
+    if (!global.locations) {
+        global.locations = {};
+    }
+    if (!global.locations[name]) {
+        magik.dixit(`No published location found for ${name}!`);
+        return;
+    }
+
+    const whereJSON = global.locations[name];
+
+    // Turn the JSON into a BukkitLocation
+    const where = magik.fromJSON(whereJSON);
+    magik.ianuae(where);
+}
 ```
-The volare spell takes a duration argument. That's how long the effect of the spell will last. So let's add that in:
-
-```
-export const volare = (canon) => (duration) => {}
-```
-
-OK, so now you have a spell that takes a canon from Magikcraft and returns another spell that takes a duration. Now let's add some types.
-
-5. Because you imported the `magikcraft.io` package, and you're using Visual Studio Code, you can get the editor to fill in some of the information for you. In Visual Studio Code you should add the extension "TypeScript Hero". Search around for extensions, and when you find them, load "TypeScript Hero".
-
-Now put your cursor over `canon` and click it. Then, open the Command Palette. On my Mac I press Command-Shift-P - or I can get to it via `View > Command Palette`. In command palette type 'Import'. If you have TypeScript Hero installed, you'll have an option for 'TS Hero: Adds the current symbol under the cursor as an import to current file.'

@@ -6,6 +6,7 @@ import * as dixit from './lore/dixit';
 import * as doNTimes from './lore/doNTimes';
 import * as exmemento from './lore/exmemento';
 import * as exsultus from './lore/exsultus';
+import * as fromJSON from './lore/fromJSON';
 import * as hic from './lore/hic';
 import * as iacta from './lore/iacta';
 import * as ianuae from './lore/ianuae';
@@ -19,6 +20,7 @@ import * as satio from './lore/satio';
 import * as shakti from './lore/shakti';
 import * as stella from './lore/stella';
 import * as test123 from './lore/test123';
+import * as toJSON from './lore/toJSON';
 import * as viburnum from './lore/viburnum';
 import * as volare from './lore/volare';
 
