@@ -30,6 +30,7 @@ export const loreToLoad = [
     aspecto,
     auxilium,
     celeritate,
+    declaro,
     dixit,
     doNTimes,
     exmemento,

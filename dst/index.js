@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var aspecto = require("./lore/aspecto");
 var auxilium = require("./lore/auxilium");
 var celeritate = require("./lore/celeritate");
+var declaro = require("./lore/declaro");
 var dixit = require("./lore/dixit");
 var doNTimes = require("./lore/doNTimes");
 var exmemento = require("./lore/exmemento");
@@ -29,6 +30,7 @@ exports.loreToLoad = [
     aspecto,
     auxilium,
     celeritate,
+    declaro,
     dixit,
     doNTimes,
     exmemento,
