@@ -7,6 +7,7 @@ var dixit = require("./lore/dixit");
 var doNTimes = require("./lore/doNTimes");
 var exmemento = require("./lore/exmemento");
 var exsultus = require("./lore/exsultus");
+var fromJSON = require("./lore/fromJSON");
 var hic = require("./lore/hic");
 var iacta = require("./lore/iacta");
 var ianuae = require("./lore/ianuae");
@@ -20,6 +21,7 @@ var satio = require("./lore/satio");
 var shakti = require("./lore/shakti");
 var stella = require("./lore/stella");
 var test123 = require("./lore/test123");
+var toJSON = require("./lore/toJSON");
 var viburnum = require("./lore/viburnum");
 var volare = require("./lore/volare");
 exports.description = "The core Magikcraft API spells";
@@ -31,6 +33,7 @@ exports.loreToLoad = [
     doNTimes,
     exmemento,
     exsultus,
+    fromJSON,
     hic,
     iacta,
     ianuae,
@@ -44,6 +47,7 @@ exports.loreToLoad = [
     shakti,
     stella,
     test123,
+    toJSON,
     viburnum,
     volare
 ];
