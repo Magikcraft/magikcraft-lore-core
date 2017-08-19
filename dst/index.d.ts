@@ -1,6 +1,7 @@
 import * as aspecto from './lore/aspecto';
 import * as auxilium from './lore/auxilium';
 import * as celeritate from './lore/celeritate';
+import * as declaro from './lore/declaro';
 import * as dixit from './lore/dixit';
 import * as doNTimes from './lore/doNTimes';
 import * as exmemento from './lore/exmemento';
@@ -23,4 +24,4 @@ import * as toJSON from './lore/toJSON';
 import * as viburnum from './lore/viburnum';
 import * as volare from './lore/volare';
 export declare const description = "The core Magikcraft API spells";
-export declare const loreToLoad: (typeof aspecto | typeof auxilium | typeof celeritate | typeof dixit | typeof doNTimes | typeof exmemento | typeof exsultus | typeof fromJSON | typeof hic | typeof iacta | typeof ianuae | typeof incendium | typeof infierno | typeof memento | typeof noxvida | typeof radiatum | typeof random | typeof satio | typeof shakti | typeof stella | typeof test123 | typeof toJSON | typeof viburnum | typeof volare)[];
+export declare const loreToLoad: (typeof aspecto | typeof auxilium | typeof celeritate | typeof declaro | typeof dixit | typeof doNTimes | typeof exmemento | typeof exsultus | typeof fromJSON | typeof hic | typeof iacta | typeof ianuae | typeof incendium | typeof infierno | typeof memento | typeof noxvida | typeof radiatum | typeof random | typeof satio | typeof shakti | typeof stella | typeof test123 | typeof toJSON | typeof viburnum | typeof volare)[];
