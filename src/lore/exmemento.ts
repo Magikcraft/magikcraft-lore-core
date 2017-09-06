@@ -1,4 +1,4 @@
-declare const global: any;
+declare const global: any, magikcraft: any;
 import { ICanon } from 'magikcraft.io';
 
 /**
@@ -8,5 +8,9 @@ import { ICanon } from 'magikcraft.io';
 export const name = 'exmemento';
 export const cost = 0;
 export const code = (canon: ICanon) => (key = '__default'): any => {
-    return global.mementii[key];
+    const magik = magikcraft.io;
+    if (magik.durablePlayerMap.containsKey(key)) {
+        return magik.durablePlayerMap.get(key);
+    }
+    return undefined;
 };

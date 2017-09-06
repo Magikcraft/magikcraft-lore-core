@@ -1,8 +1,14 @@
 # The Core Lore for the Magikcraft API
 
+## durablePlayerMap
+
+Added: Wednesday 6 September, 2017
+
+`magik.memento` and `magik.exmemento` use the `durablePlayerMap` instead of a JavaScript object.
+
 ## toJSON and fromJSON
 
-Added: Thursday 17 August
+Added: Thursday 17 August, 2017
 
 The helper methods `magik.toJSON` and `magik.fromJSON` serialise Java types to/from JSON for transport or storage.
 
