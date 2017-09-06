@@ -4,26 +4,26 @@ exports.name = 'memento';
 exports.cost = 0;
 exports.code = function (canon) {
     var MSG = canon.MSG;
+    var magik = magikcraft.io;
     function getItem(key) {
-        if (!global.mementii) {
-            global.mementii = {};
+        if (magik.durablePlayerMap.containsKey(key)) {
+            return magik.durablePlayerMap.get(key);
         }
-        return global.mementii[key];
+        else {
+            return undefined;
+        }
     }
     function _setItem(key, value) {
         if (!value) {
             value = key;
-            key = '__default';
+            key = 'memory.default';
         }
-        if (!global.mementii) {
-            global.mementii = {};
-        }
-        global.mementii[key] = value;
+        magik.durablePlayerMap.put(key, value);
         if (value instanceof Java.type("org.bukkit.Location")) {
             canon.displayLocalMsg("I remembered this place");
         }
         else {
-            canon.displayLocalMsg("I remember that!");
+            canon.displayLocalMsg("I remembered " + key);
         }
     }
     var _localStorage = _setItem;
