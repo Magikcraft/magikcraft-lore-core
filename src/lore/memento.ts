@@ -32,7 +32,7 @@ export const code = (canon: ICanon): ILocalStorage => {
         if (value instanceof Java.type("org.bukkit.Location")) {
             canon.displayLocalMsg(`I remembered this place as ${key}`);
         } else {
-            canon.displayLocalMsg(`I remembered ${key}`);
+            canon.displayLocalMsg(`I remembered ${value} as ${key}`);
         }
     }
     const _localStorage: ILocalStorage = (_setItem as any);
