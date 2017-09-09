@@ -23,7 +23,7 @@ exports.code = function (canon) {
             canon.displayLocalMsg("I remembered this place as " + key);
         }
         else {
-            canon.displayLocalMsg("I remembered " + key);
+            canon.displayLocalMsg("I remembered " + value + " as " + key);
         }
     }
     var _localStorage = _setItem;
