@@ -30,7 +30,7 @@ export const code = (canon: ICanon): ILocalStorage => {
         magik.durablePlayerMap.put(key, value);
 
         if (value instanceof Java.type("org.bukkit.Location")) {
-            canon.displayLocalMsg("I remembered this place");
+            canon.displayLocalMsg(`I remembered this place as ${key}`);
         } else {
             canon.displayLocalMsg(`I remembered ${key}`);
         }
