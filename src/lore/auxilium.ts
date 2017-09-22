@@ -1,4 +1,3 @@
-import { ICanon } from 'magikcraft.io';
 export const name = 'auxilium';
 export const cost = 0;
 export const code = (canon: ICanon) => (playerName: string) => {

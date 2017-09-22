@@ -1,4 +1,3 @@
-import { ICanon } from 'magikcraft.io';
 /**
  * Memento is a memory storage setter, modelled after localStorage.setItem.
  * It takes a key and a value. If no key is supplied, then the key '__default' is used.

@@ -1,5 +1,4 @@
 declare const global: any, magikcraft: any;
-import { ICanon } from 'magikcraft.io';
 
 /**
  * Exmemento is a memory storage getter, modelled on localStorage.getItem.

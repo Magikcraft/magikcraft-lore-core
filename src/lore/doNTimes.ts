@@ -1,5 +1,3 @@
-import { ICanon } from 'magikcraft.io';
-
 export const name = 'doNTimes';
 export const cost = 0;
 export const code = (canon: ICanon) => (action: (...args: any[]) => any, nTimes = 1, delay = 100, callback?: () => any) => {

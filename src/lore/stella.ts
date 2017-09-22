@@ -1,4 +1,3 @@
-import { ICanon } from 'magikcraft.io';
 declare const org: any;
 
 export const name = 'stella';

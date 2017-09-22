@@ -1,8 +1,8 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * EXAMPLE ONLY - DO NOT INCLUDE IN INDEX
  */
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.name = 'auxilium';
 exports.cost = 0;
 exports.code = function (canon) { return function (playerName) {

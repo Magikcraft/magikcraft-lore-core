@@ -1,4 +1,3 @@
-import { ICanon } from 'magikcraft.io';
 export const name = 'fromJSON';
 export const cost = 0;
 

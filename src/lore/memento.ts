@@ -1,5 +1,4 @@
 declare const global: any, magikcraft: any;
-import { ICanon } from 'magikcraft.io';
 
 /**
  * Memento is a memory storage setter, modelled after localStorage.setItem.

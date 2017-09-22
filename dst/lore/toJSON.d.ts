@@ -1,4 +1,3 @@
-import { ICanon } from 'magikcraft.io';
 export declare const name = "toJSON";
 export declare const cost = 0;
 export declare const code: (canon: ICanon) => (thing: any) => {

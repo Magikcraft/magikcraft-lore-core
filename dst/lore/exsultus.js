@@ -1,9 +1,9 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Exsultus is the classic jump spell.
  * Applies a vertical velocity to a player. Takes a power between -100 and 100 that represents the percentage of maximum possible velocity.
  */
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.name = 'exsultus';
 exports.cost = 1;
 exports.code = function (canon) { return function (power) {

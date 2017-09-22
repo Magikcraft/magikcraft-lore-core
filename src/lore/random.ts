@@ -1,5 +1,3 @@
-import { ICanon } from 'magikcraft.io';
-
 export const cost = 0;
 export const name = 'random';
 export const code = (canon: ICanon) => function (min = 1, max= 10) {

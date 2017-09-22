@@ -21,7 +21,6 @@ var random = require("./lore/random");
 var satio = require("./lore/satio");
 var shakti = require("./lore/shakti");
 var stella = require("./lore/stella");
-var test123 = require("./lore/test123");
 var toJSON = require("./lore/toJSON");
 var viburnum = require("./lore/viburnum");
 var volare = require("./lore/volare");
@@ -48,7 +47,6 @@ exports.loreToLoad = [
     satio,
     shakti,
     stella,
-    test123,
     toJSON,
     viburnum,
     volare
