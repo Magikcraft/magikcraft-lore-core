@@ -1,6 +1,8 @@
 # Aspecto
 
-`magikcraft.io.aspecto` returns the location where you are looking.
+`magikcraft.io.aspecto`
+
+Returns the location where you are looking.
 
 * Arguments: none
 * Returns: `BukkitLocation`
