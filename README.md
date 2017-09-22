@@ -68,4 +68,4 @@ function tp2p(name = '@@INIT'){
     magik.ianuae(where);
 }
 ```
-.
+
