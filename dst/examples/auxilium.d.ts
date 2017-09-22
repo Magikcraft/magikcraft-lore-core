@@ -1,4 +1,3 @@
-import { ICanon } from 'magikcraft.io';
 /**
  * EXAMPLE ONLY - DO NOT INCLUDE IN INDEX
  */

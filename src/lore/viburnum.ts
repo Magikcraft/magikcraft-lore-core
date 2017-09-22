@@ -1,5 +1,3 @@
-import { ICanon } from 'magikcraft.io';
-
 export const name = 'viburnum';
 export const cost = 0;
 export const code = (canon: ICanon) => (amount = 1, delay = 200) => {

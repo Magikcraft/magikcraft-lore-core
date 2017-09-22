@@ -1,5 +1,4 @@
-declare const global: any;
-import { ICanon } from 'magikcraft.io';
+declare const global: any, magikcraft: any;
 
 /**
  * Memento is a memory storage setter, modelled after localStorage.setItem.
@@ -13,27 +12,26 @@ export const name = 'memento';
 export const cost = 0;
 export const code = (canon: ICanon): ILocalStorage => {
     const MSG = canon.MSG;
+    const magik = magikcraft.io;
 
     function getItem(key: string) {
-        if (!global.mementii) {
-            global.mementii = {};
+        if (magik.durablePlayerMap.containsKey(key)) {
+            return magik.durablePlayerMap.get(key);
+        } else {
+            return undefined;
         }
-        return global.mementii[key];
     }
     function _setItem(key: string, value: any) {
         if (!value) {
             value = key;
-            key = '__default';
+            key = 'memory.default';
         }
-        if (!global.mementii) {
-            global.mementii = {};
-        }
-        global.mementii[key] = value;
+        magik.durablePlayerMap.put(key, value);
 
         if (value instanceof Java.type("org.bukkit.Location")) {
-            canon.displayLocalMsg("I remembered this place");
+            canon.displayLocalMsg(`I remembered this place as ${key}`);
         } else {
-            canon.displayLocalMsg("I remember that!");
+            canon.displayLocalMsg(`I remembered ${value} as ${key}`);
         }
     }
     const _localStorage: ILocalStorage = (_setItem as any);

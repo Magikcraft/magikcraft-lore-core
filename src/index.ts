@@ -19,7 +19,6 @@ import * as random from './lore/random';
 import * as satio from './lore/satio';
 import * as shakti from './lore/shakti';
 import * as stella from './lore/stella';
-import * as test123 from './lore/test123';
 import * as toJSON from './lore/toJSON';
 import * as viburnum from './lore/viburnum';
 import * as volare from './lore/volare';
@@ -48,7 +47,6 @@ export const loreToLoad = [
     satio,
     shakti,
     stella,
-    test123,
     toJSON,
     viburnum,
     volare

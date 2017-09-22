@@ -1,5 +1,3 @@
-import { ICanon } from 'magikcraft.io';
-
 export const name = 'infierno';
 export const cost = 1;
 export const code = (canon: ICanon) => function () {

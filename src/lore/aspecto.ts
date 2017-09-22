@@ -1,5 +1,3 @@
-import { BukkitLocation, ICanon } from 'magikcraft.io';
-
 export const name = 'aspecto';
 export const cost = 0;
 export const code = (canon: ICanon) => (): BukkitLocation => {

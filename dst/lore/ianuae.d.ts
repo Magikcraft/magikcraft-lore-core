@@ -1,4 +1,3 @@
-import { BukkitLocation, ICanon } from 'magikcraft.io';
 /**
  * Ianuae teleports the player to a given location.
  */
