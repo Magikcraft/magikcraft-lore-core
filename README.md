@@ -7,7 +7,7 @@ The helper methods `magik.toJSON` and `magik.fromJSON` serialise Java types to/f
 
 At the moment the only supported Java type is a `BukkitLocation`. You can use this to publish a BukkitLocation over the eventbus, and to consume a BukkitLocation from the eventbus.
 
-Here is an example.
+Here is an example:
 
 ### Publish your location via the Eventbus
 
