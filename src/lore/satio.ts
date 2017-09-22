@@ -1,16 +1,14 @@
 export const name = 'satio';
 export const cost = 0;
 export const code = (canon: ICanon) => function (playerName: string) {
-    const MSG = canon.MSG;
+    const manifest = function (item: string) {
+        const MATERIAL = Java.type("org.bukkit.Material");
+        const ItemStack = Java.type("org.bukkit.inventory.ItemStack");
+        const thing = new ItemStack(MATERIAL[item]);
+        canon.sender.getInventory().addItem(thing);
+        canon.magik.msg('You got an apple'); // @TODO: localised message
+    };
+    manifest('APPLE');
 
-    if (typeof playerName === "undefined") {
-        canon.magik.msg(MSG.SATIO_GENERIC);
-        return canon.sender.setFoodLevel(30);
-    }
-    var player = canon.plugin.getServer().getPlayer(playerName);
-    if (typeof player === "undefined") {
-        // TODO: Replace with localised message
-        return canon.sender.sendMessage("Could not find " + playerName);
-    }
-    player.setFoodLevel(20);
+//    player.setFoodLevel(20);
 };
