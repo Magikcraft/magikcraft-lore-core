@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.name = 'exmemento';
 exports.cost = 0;
 exports.code = function (canon) { return function (key) {
-    if (key === void 0) { key = '__default'; }
+    if (key === void 0) { key = 'memory.default'; }
     var magik = magikcraft.io;
     if (magik.durablePlayerMap.containsKey(key)) {
         return magik.durablePlayerMap.get(key);
