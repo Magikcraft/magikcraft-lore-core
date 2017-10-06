@@ -10,6 +10,7 @@ export interface ILocalStorage {
 }
 export const name = 'memento';
 export const cost = 0;
+export const undecorated = true;
 export const code = (canon: ICanon): ILocalStorage => {
     const MSG = canon.MSG;
     const magik = magikcraft.io;

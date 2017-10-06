@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.name = 'memento';
 exports.cost = 0;
+exports.undecorated = true;
 exports.code = function (canon) {
     var MSG = canon.MSG;
     var magik = magikcraft.io;
