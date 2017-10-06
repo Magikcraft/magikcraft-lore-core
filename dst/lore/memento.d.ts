@@ -8,4 +8,5 @@ export interface ILocalStorage {
 }
 export declare const name = "memento";
 export declare const cost = 0;
+export declare const undecorated: boolean;
 export declare const code: (canon: ICanon) => ILocalStorage;
