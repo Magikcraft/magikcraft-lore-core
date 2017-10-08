@@ -6,7 +6,9 @@ exports.undecorated = true;
 exports.code = function (canon) {
     var MSG = canon.MSG;
     var magik = magikcraft.io;
+    var defaultKey = 'memory.default';
     function getItem(key) {
+        if (key === void 0) { key = defaultKey; }
         if (magik.durablePlayerMap.containsKey(key)) {
             return magik.durablePlayerMap.get(key);
         }
@@ -17,7 +19,7 @@ exports.code = function (canon) {
     function _setItem(key, value) {
         if (!value) {
             value = key;
-            key = 'memory.default';
+            key = defaultKey;
         }
         magik.durablePlayerMap.put(key, value);
         if (value instanceof Java.type("org.bukkit.Location")) {

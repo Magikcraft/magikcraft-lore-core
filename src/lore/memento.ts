@@ -14,18 +14,19 @@ export const undecorated = true;
 export const code = (canon: ICanon): ILocalStorage => {
     const MSG = canon.MSG;
     const magik = magikcraft.io;
+    const defaultKey = 'memory.default';
 
-    function getItem(key: string) {
+    function getItem(key: string = defaultKey) {
         if (magik.durablePlayerMap.containsKey(key)) {
             return magik.durablePlayerMap.get(key);
         } else {
             return undefined;
         }
     }
-    function _setItem(key: string, value: any) {
+    function _setItem(key: string, value?: any) {
         if (!value) {
             value = key;
-            key = 'memory.default';
+            key = defaultKey;
         }
         magik.durablePlayerMap.put(key, value);
 
