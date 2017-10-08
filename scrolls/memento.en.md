@@ -6,7 +6,7 @@ Access your memory, to store or recall something.
 
 ## `setItem`
 
-To remember something, use `setItem`:
+To remember something, use `memento.setItem`:
 
 ### Example
 
@@ -18,7 +18,7 @@ function remember() {
     magik.memento.setItem(here);
 }
 ```
-`setItem` can also take a key, so you can remember more than one thing:
+`memento.setItem` can also take a key, so you can remember more than one thing:
 
 ```javascript
 const magik = magikcraft.io;
@@ -31,7 +31,7 @@ function remember(name){
 
 ## `getItem`
 
-To recall something, use `getItem`:
+To recall something, use `memento.getItem`:
 
 ### Example
 
@@ -44,7 +44,7 @@ function recall(){
 }
 ```
 
-`getItem` also takes a key, so you can recall more than one memory:
+`memento.getItem` also takes a key, so you can recall more than one memory:
 
 ```javascript
 const magik = magikcraft.io;
