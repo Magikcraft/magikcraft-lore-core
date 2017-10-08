@@ -1,6 +1,6 @@
 {
   "name": "magikcraft-lore-core",
-  "version": "1.2.4",
+  "version": "1.4.4",
   "description": "The core Magikcraft spells",
   "main": "dst/index.js",
   "scripts": {
