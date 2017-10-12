@@ -2,9 +2,9 @@
 
 `magikcraft.io.satio`
 
-Provide an apple to eat.
+リンゴを食べさせる。
 
-## Example
+## 実例
 
 ```javascript
 const magik = magikcraft.io;
