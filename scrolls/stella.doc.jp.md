@@ -2,9 +2,9 @@
 
 `magikcraft.io.stella`
 
-Light a rocket.
+ロケットを照らす。
 
-## Example
+## 実例
 
 ```javascript
 const magik = magikcraft.io;

@@ -2,9 +2,9 @@
 
 `magikcraft.io.auxilium`
 
-Heal a friend. This spell cannot be used to heal yourself.
+友人を癒す。 この呪文はあなた自身を癒すために使用できません
 
-## Example
+## 実例
 
 ```javascript
 const magik = magikcraft.io;

@@ -2,9 +2,9 @@
 
 `magikcraft.io.noxvida`
 
-Night vision.
+夜間視力。
 
-## Example
+## 実例
 
 ```javascript
 const magik = magikcraft.io;

@@ -2,9 +2,9 @@
 
 `magikcraft.io.radiatum`
 
-Make a player radioactive.
+プレーヤーを放射能にする。
 
-## Example
+## 実例
 
 ```javascript
 const magik = magikcraft.io;

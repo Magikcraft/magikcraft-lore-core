@@ -2,9 +2,9 @@
 
 `magikcraft.io.incendium`
 
-Light a player on fire!
+プレイヤーに火をつけてください！
 
-## Example
+## 実例
 
 ```javascript
 const magik = magikcraft.io;

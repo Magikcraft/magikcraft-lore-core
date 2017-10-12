@@ -2,9 +2,9 @@
 
 `magikcraft.io.iacta`
 
-Toss a player in the air.
+空気中のプレーヤーを投げる。
 
-## Examples
+## 実例
 
 ```javascript
 const magik = magikcraft.io;

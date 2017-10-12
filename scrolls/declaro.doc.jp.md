@@ -2,9 +2,9 @@
 
 `magikcraft.io.declaro`
 
-Manifest an item.
+アイテムをマニフェストします。
 
-## Example
+## 実例
 
 ```javascript
 const magik = magikcraft.io;
