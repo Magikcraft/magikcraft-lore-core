@@ -2,9 +2,9 @@
 
 `magikcraft.io.dixit`
 
-Print a message to the player's console.
+プレーヤーのコンソールにメッセージを出力します。
 
-## Example
+## 実例
 
 ```javascript
 const magik = magikcraft.io;

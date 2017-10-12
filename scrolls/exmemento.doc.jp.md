@@ -2,9 +2,9 @@
 
 `magikcraft.io.exmemento`
 
-Retrieve a memory.
+メモリを取得します。
 
-## Example
+## 実例
 
 ```javascript
 const magik = magikcraft.io;

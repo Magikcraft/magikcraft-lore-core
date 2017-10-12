@@ -2,9 +2,9 @@
 
 `magikcraft.io.hic`
 
-Return the location where you are now.
+あなたが現在いる場所を入手してください。
 
-## Examples
+## 実例
 
 ```javascript
 const magik = magikcraft.io;

@@ -2,9 +2,9 @@
 
 `magikcraft.io.random`
 
-Return a random number.
+乱数を生成する。
 
-## Example
+## 実例
 
 ```javascript
 magik = magikcraft.io;

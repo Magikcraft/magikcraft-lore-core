@@ -2,9 +2,9 @@
 
 `magikcraft.io.infierno`
 
-Launch a fireball.
+火球を発射する。
 
-## Example
+## 実例
 
 ```javascript
 const magik = magikcraft.io;

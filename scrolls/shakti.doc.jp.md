@@ -2,9 +2,9 @@
 
 `magikcraft.io.shakti`
 
-Strike a lightning bolt.
+稲妻を打つ。
 
-## Example
+## 実例
 
 ```javascript
 const magik = magikcraft.io;

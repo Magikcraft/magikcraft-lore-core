@@ -2,9 +2,9 @@
 
 `magikcraft.io.celeritate`
 
-Accelerate! Makes you travel at warp speed.
+加速する！ あなたはワープスピードで移動します。
 
-## Example
+## 実例
 
 ```javascript
 const magik = magikcraft.io;

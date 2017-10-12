@@ -2,9 +2,9 @@
 
 `magikcraft.io.exsultus`
 
-Jump into the air.
+空気に飛び込む。
 
-## Example
+## 実例
 
 ```javascript
 const magik = magikcraft.io;

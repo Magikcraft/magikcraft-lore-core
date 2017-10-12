@@ -2,9 +2,9 @@
 
 `magikcraft.io.aspecto`
 
-Returns the location where you are looking.
+探している場所を返します。
 
-## Example
+## 実例
 
 ```javascript
 const magik = magikcraft.io;

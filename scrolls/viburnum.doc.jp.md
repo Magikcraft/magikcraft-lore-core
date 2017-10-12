@@ -2,9 +2,9 @@
 
 `magikcraft.io.viburnum`
 
-Throw a snowball.
+雪のボールを投げる。
 
-## Example
+## 実例
 
 ```javascript
 const magik = magikcraft.io;
