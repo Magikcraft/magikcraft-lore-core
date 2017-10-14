@@ -12,7 +12,7 @@ At the moment the only supported Java type is a `BukkitLocation`. You can use th
 
 This spell publishes your current location over the eventbus.
 
-```
+```javascript
 const magik = magikcraft.io;
 const locationTopic = 'locations';
 
@@ -31,7 +31,7 @@ function publishLocation() {
 
 Here is a teleport spell that uses the eventbus published locations to teleport to the last published location for a player:
 
-```
+```javascript
 const magik = magikcraft.io;
 const locationTopic = 'locations';
 
