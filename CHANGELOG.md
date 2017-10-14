@@ -1,18 +1,27 @@
-# toJSON
+# Changelog
 
-`magikcraft.io.toJSON`
 
-Serialise Java types to JSON for transport or storage.
+## durablePlayerMap
+
+Added: Wednesday 6 September, 2017
+
+`magik.memento` and `magik.exmemento` use the `durablePlayerMap` instead of a JavaScript object.
+
+## toJSON and fromJSON
+
+Added: Thursday 17 August, 2017
+
+The helper methods `magik.toJSON` and `magik.fromJSON` serialise Java types to/from JSON for transport or storage.
 
 At the moment the only supported Java type is a `BukkitLocation`. You can use this to publish a BukkitLocation over the eventbus, and to consume a BukkitLocation from the eventbus.
 
-## Example
+Here is an example:
 
 ### Publish your location via the Eventbus
 
 This spell publishes your current location over the eventbus.
 
-```javascript
+```
 const magik = magikcraft.io;
 const locationTopic = 'locations';
 
@@ -31,7 +40,7 @@ function publishLocation() {
 
 Here is a teleport spell that uses the eventbus published locations to teleport to the last published location for a player:
 
-```javascript
+```
 const magik = magikcraft.io;
 const locationTopic = 'locations';
 

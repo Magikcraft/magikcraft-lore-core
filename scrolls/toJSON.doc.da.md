@@ -1,16 +1,17 @@
+
 # toJSON
 
 `magikcraft.io.toJSON`
 
-Serialise Java types to JSON for transport or storage.
+Serialiser Java-typer til JSON til transport eller opbevaring.
 
-At the moment the only supported Java type is a `BukkitLocation`. You can use this to publish a BukkitLocation over the eventbus, and to consume a BukkitLocation from the eventbus.
+I øjeblikket er den eneste understøttede Java-type en `BukkitLocation`. Du kan bruge dette til at udgive en BukkitLocation over eventbus og at forbruge en BukkitLocation fra eventbus.
 
-## Example
+## Eksempel
 
-### Publish your location via the Eventbus
+### Udgiv din placering via Eventbus
 
-This spell publishes your current location over the eventbus.
+Denne stave offentliggør din nuværende placering over eventbus.
 
 ```javascript
 const magik = magikcraft.io;
@@ -27,9 +28,9 @@ function publishLocation() {
 }
 ```
 
-### Teleport to Player spell
+### Teleport til spilleren stavning
 
-Here is a teleport spell that uses the eventbus published locations to teleport to the last published location for a player:
+Her er en teleport-stavning, der bruger eventbus-publicerede steder til at teleportere til den sidst offentliggjorte placering for en spiller:
 
 ```javascript
 const magik = magikcraft.io;

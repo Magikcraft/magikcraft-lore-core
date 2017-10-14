@@ -1,70 +1,20 @@
 # The Core Lore for the Magikcraft API
 
-## durablePlayerMap
 
-Added: Wednesday 6 September, 2017
+## Localisation Pipeline
 
-`magik.memento` and `magik.exmemento` use the `durablePlayerMap` instead of a JavaScript object.
+1. To generate `.pot` (po template) files, run `node ./l10n/generate-pot.js`.
 
-## toJSON and fromJSON
+This converts the English markdown files into `.pot` files in the `pot` directory.
 
-Added: Thursday 17 August, 2017
+2. To perform automated translation (this will overwrite any existing translations at this stage), run `gulp translate-da` or `gulp translate-jp`.
 
-The helper methods `magik.toJSON` and `magik.fromJSON` serialise Java types to/from JSON for transport or storage.
+This outputs machine translations from Google Cloud into the `po/${lang}` directory.
 
-At the moment the only supported Java type is a `BukkitLocation`. You can use this to publish a BukkitLocation over the eventbus, and to consume a BukkitLocation from the eventbus.
+3. To merge these machine translations and build a new set of scrolls for a language, run `gulp build-da` or `gulp build-jp`.
 
-Here is an example:
+This merges the machine translations into markdown files and places them in the `scrolls` directory.
 
-### Publish your location via the Eventbus
+Note that there is no facility for respecting existing translations at this point in time.
 
-This spell publishes your current location over the eventbus.
-
-```
-const magik = magikcraft.io;
-const locationTopic = 'locations';
-
-// Publish my location over the eventbus
-function publishLocation() {
-    const here = magik.hic(); // get player current location
-    const hereJSON = magik.toJSON(here); // turn it into a JSON object
-    // magik.dixit(JSON.stringify(hereJSON)); // you can print it out
-
-    // Publish player location to 'locations' topic on the eventbus
-    eventbus.publish(locationTopic, {name: global.PlayerName, location: hereJSON});
-}
-```
-
-### Teleport to Player spell
-
-Here is a teleport spell that uses the eventbus published locations to teleport to the last published location for a player:
-
-```
-const magik = magikcraft.io;
-const locationTopic = 'locations';
-
-function tp2p(name = '@@INIT'){
-    // If global.locations doesn't exist, we are not subscribed yet
-    if (!global.locations) {
-        global.locations = {};
-        eventbus.subscribe(locationTopic, event => {
-            const who = event.data.name;
-            const where = event.data.location;
-            global.locations[who] = where;
-        });
-    }
-    if (name === '@@INIT') {
-        return;
-    }
-    if (!global.locations[name]) {
-        magik.dixit(`No published location found for ${name}!`);
-        return;
-    }
-
-    const whereJSON = global.locations[name];
-
-    // Turn the JSON into a BukkitLocation
-    const where = magik.fromJSON(whereJSON);
-    magik.ianuae(where);
-}
-```
+`gulp generate-po-files`
