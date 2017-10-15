@@ -7,8 +7,13 @@ const scrollsl10n = require('./l10n')({
     potDir: 'scrolls/pot',
 });
 const fs = require("fs");
+const uncaught = require("uncaught");
+uncaught.start();
+uncaught.addListener(function (error) {
+    console.log('Uncaught error or rejection: ', error);
+});
 
-const supportedLangs = ["ja", "nb", "da", "ru", "fr"];
+const supportedLangs = ["ja", "nb", "da", "ru", "fr", "ko"];
 
 const updatePOFiles = () => Promise.all(supportedLangs.map(lang => scrollsl10n.updatePO(lang)));
 
