@@ -10,8 +10,12 @@ const fs = require('fs-extra');
 */
 
 function main({ toLang, poDir, potDir }) {
+    console.log(`Update PO Files ${toLang}`);
     const poFileDir = `${poDir}/${toLang}`;
     const potFiles = fs.readdirSync(potDir);
+    if (!fs.existsSync(poFileDir)) {
+        fs.mkdirpSync(poFileDir);
+    }
     return Promise.all(potFiles.map(potFileName => {
         const potFile = `${potDir}/${potFileName}`;
         po.load(potFile, pot => {
@@ -21,7 +25,7 @@ function main({ toLang, poDir, potDir }) {
                 return mergePOTWithPO(pot, poFile);
             } else {
                 return fs.copy(potFile, poFile)
-                    .then(() => updateLanguageCode(poFile, toLang));
+                    .then(() => updateLanguageCode(poFile, toLang))
             }
         });
     }));

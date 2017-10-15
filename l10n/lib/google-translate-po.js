@@ -71,6 +71,7 @@ function translate(items, toLang, fromLang = "en") {
 
 
 function googleTranslatePO({ poDir, toLang, cb }) {
+  console.log(`Google Translate ${toLang}`);
   const baseDir = `${poDir}/${toLang}`;
   const files = fs.readdirSync(baseDir);
   return Promise.all(

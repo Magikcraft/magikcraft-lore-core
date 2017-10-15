@@ -8,28 +8,28 @@ const scrollsl10n = require('./l10n')({
 });
 const fs = require("fs");
 
-gulp.task("update-pot", () => scrollsl10n.generatePOTFromMD());
+const supportedLangs = ["ja", "nb", "da", "ru"];
 
-gulp.task("update-po-files", () =>
-  ["ja", "nb", "da", "ru"].map(lang => scrollsl10n.updatePO(lang)));
+const updatePOFiles = () => Promise.all(supportedLangs.map(lang => scrollsl10n.updatePO(lang)));
 
-gulp.task("google-translate-ja", done => scrollsl10n.googleTranslatePO("ja", done));
-gulp.task("google-translate-da", done => scrollsl10n.googleTranslatePO("da", done));
-gulp.task("google-translate-nb", done => scrollsl10n.googleTranslatePO("nb", done));
-gulp.task("google-translate-ru", done => scrollsl10n.googleTranslatePO("ru", done));
+const googleTranslate = () => Promise.all(supportedLangs.map(lang => scrollsl10n.googleTranslatePO(lang)));
 
-gulp.task("google-translate-all", [
-  "google-translate-ja",
-  "google-translate-da",
-  "google-translate-nb",
-  "google-translate-ru"
-]);
+const buildScrolls = () => Promise.all(supportedLangs.map(lang => scrollsl10n.buildMDFromPO(lang)));
 
-gulp.task("build-da", done => scrollsl10n.buildMDFromPO("da"));
-gulp.task("build-ja", done => scrollsl10n.buildMDFromPO("ja"));
-gulp.task("build-nb", done => scrollsl10n.buildMDFromPO("nb"));
-gulp.task("build-ru", done => scrollsl10n.buildMDFromPO("ru"));
+gulp.task("update-pot", done => scrollsl10n.generatePOTFromMD().then(() => done));
 
-gulp.task("update-scrolls", ["google-translate-all", "build-scrolls"]);
+gulp.task("update-po-files", done => updatePOFiles().then(() => done));
 
-gulp.task("build-scrolls", ["build-da", "build-ja", "build-nb", "build-ru"]);
+gulp.task("google-translate-all", done => googleTranslate().then(() => done));
+
+gulp.task("build-scrolls", done => buildScrolls().then(() => done));
+
+gulp.task("update-translations", done => {
+    scrollsl10n.generatePOTFromMD()
+      .then(() => updatePOFiles())
+      .then(() => googleTranslate())
+      .then(() => buildScrolls())
+      .then(() => done());
+});
+
+

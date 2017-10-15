@@ -2,6 +2,7 @@ const gmd = require('./gettext-markdown');
 const fs = require('fs');
 
 module.exports = ({sourceDir, poDir}) => lang => {
+    console.log(`Build scrolls ${lang}`);
     const inputDir = `${poDir}/${lang}/`;
     const outputDir = `${sourceDir}/${lang}`;
     if (!fs.existsSync(outputDir)) {

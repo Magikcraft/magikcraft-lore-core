@@ -5,7 +5,7 @@
 
 Returnerer placeringen hvor du leder.
 
-## Eksempels
+## Eksempel
 
 ```javascript
 const magik = magikcraft.io;
