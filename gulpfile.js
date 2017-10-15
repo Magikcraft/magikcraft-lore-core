@@ -1,40 +1,40 @@
 const gulp = require("gulp");
 const rename = require("gulp-rename");
-const translatePO = require("./l10n/translate-po");
+const scrollsl10n = require('./l10n')({
+    poDir: 'scrolls/po',
+    sourceDir: 'scrolls',
+    fromLang: 'en',
+    potDir: 'scrolls/pot',
+});
 const fs = require("fs");
-const buildMD = require('./l10n/generate-md');
+const uncaught = require("uncaught");
+uncaught.start();
+uncaught.addListener(function (error) {
+    console.log('Uncaught error or rejection: ', error);
+});
 
-gulp.task(
-  "generate-po-files", () =>
-  ["ja", "no", "da"].map(lang => {
-    gulp
-      .src("pot/*")
-      .pipe(
-        rename(function(path) {
-          path.basename = path.basename.replace(".en", `.${lang}`);
-          path.extname = ".po";
-        })
-      )
-      .pipe(gulp.dest(`po/${lang}`));
-  })
-);
+const supportedLangs = ["ja", "nb", "da", "ru", "fr", "ko"];
 
-gulp.task("translate-ja", done => doPOTranslate("ja", done));
-gulp.task("translate-da", done => doPOTranslate("da", done));
+const updatePOFiles = () => Promise.all(supportedLangs.map(lang => scrollsl10n.updatePO(lang)));
 
-gulp.task("build-da", done => buildMD("da"));
+const googleTranslate = () => Promise.all(supportedLangs.map(lang => scrollsl10n.googleTranslatePO(lang)));
 
-function doPOTranslate(lang, cb) {
-  const files = fs.readdirSync(`po/${lang}`);
-  Promise.all(
-    files.map(file =>
-      translatePO({
-        lang,
-        poFile: `po/${lang}/${file}`,
-        outputFile: `po/${lang}/${file}`
-      })
-    )
-  )
-    .then(() => cb())
-    .catch(err => cb(console.log("Error", err)));
-}
+const buildScrolls = () => Promise.all(supportedLangs.map(lang => scrollsl10n.buildMDFromPO(lang)));
+
+gulp.task("update-pot", done => scrollsl10n.generatePOTFromMD().then(() => done));
+
+gulp.task("update-po-files", done => updatePOFiles().then(() => done));
+
+gulp.task("google-translate-all", done => googleTranslate().then(() => done));
+
+gulp.task("build-scrolls", done => buildScrolls().then(() => done));
+
+gulp.task("update-translations", done => {
+    scrollsl10n.generatePOTFromMD()
+      .then(() => updatePOFiles())
+      .then(() => googleTranslate())
+      .then(() => buildScrolls())
+      .then(() => done());
+});
+
+
