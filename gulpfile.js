@@ -1,10 +1,12 @@
 const gulp = require("gulp");
 const rename = require("gulp-rename");
+const apikey = require("./APIKEY.json").apikey;
 const scrollsl10n = require('./l10n')({
     poDir: 'scrolls/po',
     sourceDir: 'scrolls',
     fromLang: 'en',
     potDir: 'scrolls/pot',
+    apikey
 });
 const fs = require("fs");
 const uncaught = require("uncaught");

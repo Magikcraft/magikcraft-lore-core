@@ -10,10 +10,11 @@ var async = require("async");
 var debug = require("debug")("translate-po");
 // debug = console.log;
 const fs = require('fs');
-const APIKEY = require('./APIKEY.json').apikey;
-var googleTranslate = require("google-translate")(APIKEY);
 
-function main({ poFile, toLang, outputFile }, cb) {
+function main({ poFile, toLang, outputFile, apikey }, cb) {
+  if (typeof googleTranslate == "undefined") {
+    googleTranslate = require("google-translate")(apikey);
+  }
   debug("poFile:", poFile);
   debug("toLang:", toLang);
   debug("outputFile:", outputFile);
