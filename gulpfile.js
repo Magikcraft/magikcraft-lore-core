@@ -1,40 +1,35 @@
 const gulp = require("gulp");
 const rename = require("gulp-rename");
-const translatePO = require("./l10n/translate-po");
+const scrollsl10n = require('./l10n')({
+    poDir: 'scrolls/po',
+    sourceDir: 'scrolls',
+    fromLang: 'en',
+    potDir: 'scrolls/pot',
+});
 const fs = require("fs");
-const buildMD = require('./l10n/generate-md');
 
-gulp.task(
-  "generate-po-files", () =>
-  ["ja", "no", "da"].map(lang => {
-    gulp
-      .src("pot/*")
-      .pipe(
-        rename(function(path) {
-          path.basename = path.basename.replace(".en", `.${lang}`);
-          path.extname = ".po";
-        })
-      )
-      .pipe(gulp.dest(`po/${lang}`));
-  })
-);
+gulp.task("update-pot", () => scrollsl10n.generatePOTFromMD());
 
-gulp.task("translate-ja", done => doPOTranslate("ja", done));
-gulp.task("translate-da", done => doPOTranslate("da", done));
+gulp.task("update-po-files", () =>
+  ["ja", "nb", "da", "ru"].map(lang => scrollsl10n.updatePO(lang)));
 
-gulp.task("build-da", done => buildMD("da"));
+gulp.task("google-translate-ja", done => scrollsl10n.googleTranslatePO("ja", done));
+gulp.task("google-translate-da", done => scrollsl10n.googleTranslatePO("da", done));
+gulp.task("google-translate-nb", done => scrollsl10n.googleTranslatePO("nb", done));
+gulp.task("google-translate-ru", done => scrollsl10n.googleTranslatePO("ru", done));
 
-function doPOTranslate(lang, cb) {
-  const files = fs.readdirSync(`po/${lang}`);
-  Promise.all(
-    files.map(file =>
-      translatePO({
-        lang,
-        poFile: `po/${lang}/${file}`,
-        outputFile: `po/${lang}/${file}`
-      })
-    )
-  )
-    .then(() => cb())
-    .catch(err => cb(console.log("Error", err)));
-}
+gulp.task("google-translate-all", [
+  "google-translate-ja",
+  "google-translate-da",
+  "google-translate-nb",
+  "google-translate-ru"
+]);
+
+gulp.task("build-da", done => scrollsl10n.buildMDFromPO("da"));
+gulp.task("build-ja", done => scrollsl10n.buildMDFromPO("ja"));
+gulp.task("build-nb", done => scrollsl10n.buildMDFromPO("nb"));
+gulp.task("build-ru", done => scrollsl10n.buildMDFromPO("ru"));
+
+gulp.task("update-scrolls", ["google-translate-all", "build-scrolls"]);
+
+gulp.task("build-scrolls", ["build-da", "build-ja", "build-nb", "build-ru"]);

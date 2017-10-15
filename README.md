@@ -3,13 +3,15 @@
 
 ## Localisation Pipeline
 
-1. To generate `.pot` (po template) files, run `node ./l10n/generate-pot.js`.
+1. To generate `.pot` (po template) files, run `gulp update-pot`.
 
-This converts the English markdown files into `.pot` files in the `pot` directory.
+This converts the English markdown files into `.pot` files in the `scrolls/pot` directory.
 
-2. To perform automated translation (this will overwrite any existing translations at this stage), run `gulp translate-da` or `gulp translate-jp`.
+2. Now update the language po-files.
 
-This outputs machine translations from Google Cloud into the `po/${lang}` directory.
+2. To perform automated translation (this will overwrite any existing translations at this stage), run `gulp google-translate-all`.
+
+This outputs machine translations from Google Cloud into the `scrolls/po/${lang}` directory.
 
 3. To merge these machine translations and build a new set of scrolls for a language, run `gulp build-da` or `gulp build-jp`.
 
