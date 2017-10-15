@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language: fr\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals = 2; plural = (n !== 1);\n"
+"MIME-Version: 1.0\n"
+
+#: dst/lore/auxilium.js:9
+msgid "You need to give a player name!"
+msgstr "Vous devez donner un nom de joueur!"
+
+#: dst/lore/auxilium.js:13
+msgid "You cannot heal yourself!"
+msgstr "Vous ne pouvez pas vous guérir!"
+
+#: dst/lore/auxilium.js:18
+msgid "Could not find player %s"
+msgstr "Impossible de trouver le lecteur %s"
+
+#: dst/lore/auxilium.js:22
+msgid "%s healed you!"
+msgstr "%s vous a guéri!"
+
+#: dst/lore/auxilium.js:23
+msgid "You healed %s!"
+msgstr "Vous avez guéri% s!"
+
+#: dst/lore/celeritate.js:7
+msgid "Celeritate! You now have super speed!"
+msgstr "Célerite! Vous avez maintenant une super vitesse!"
+
+#: dst/lore/declaro.js:26
+msgid "Declaro! you manifest %s"
+msgstr "Declaro! vous manifestez %s"
+
+#: dst/lore/exsultus.js:16
+msgid "You need to pass in a number to exsultus!"
+msgstr "Vous devez passer un numéro à exsultus!"
+
+#: dst/lore/iacta.js:9
+msgid "Player %s not online"
+msgstr "Le joueur% s n'est pas en ligne"
+
+#: dst/lore/ianuae.js:12
+msgid "Nowhere to teleport to..."
+msgstr "Nulle part où se téléporter"
+
+#: dst/lore/incendium.js:17
+msgid "Cannot find player %s"
+msgstr "Impossible de trouver le lecteur %s"
+
+#: dst/lore/memento.js:26
+msgid "I remembered this place as %s"
+msgstr "Je me suis souvenu de cet endroit en tant que %s"
+
+#: dst/lore/memento.js:29
+msgid "I remembered %s as %s"
+msgstr "Je me suis souvenu de %s comme %s"
+
+#: dst/lore/radiatum.js:10
+msgid "%s is now radioactive!"
+msgstr "%s est maintenant radioactif!"
+
+#: dst/lore/radiatum.js:14
+msgid "Player %s not online!"
+msgstr "Le joueur %s n'est pas en ligne!"
+
+#: dst/lore/satio.js:15
+msgid "You manifested an apple!"
+msgstr "Vous avez manifesté une pomme!"
+
+#: dst/lore/viburnum.js:19
+msgid "Snowball!"
+msgstr "Boule de neige!"

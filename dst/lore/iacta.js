@@ -3,9 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.name = 'iacta';
 exports.cost = 1;
 exports.code = function (canon) { return function (playerName) {
+    var gettext = canon.gettext;
     var toToss = canon.plugin.getServer().getPlayer(playerName);
     if (!toToss) {
-        canon.sender.sendMessage("Player " + playerName + " not online");
+        canon.sender.sendMessage(gettext('Player %s not online', playerName));
         return;
     }
     //get the angle of the velocity direction

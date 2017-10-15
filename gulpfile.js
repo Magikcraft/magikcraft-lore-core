@@ -1,5 +1,18 @@
 const gulp = require("gulp");
-const rename = require("gulp-rename");
+const fs = require("fs");
+var pipeline = require('promise-sequence/lib/pipeline');
+
+const TranslationTasks = require('gettext-js/lib/build/tasks').default;
+const sourceJs = 'dst/lore/*.js';
+const localeMainFile = 'lore-locale/template.pot';
+const sourceLocale = 'lore-locale/*.po';
+const destLocale = 'dst/locale';
+const gettextJsTasks = new TranslationTasks(gulp, sourceJs, localeMainFile, sourceLocale, destLocale);
+
+gettextJsTasks.load();
+
+// gulp gtx:locale-update
+
 const apikey = require("./APIKEY.json").apikey;
 const scrollsl10n = require('./l10n')({
     poDir: 'scrolls/po',
@@ -8,35 +21,58 @@ const scrollsl10n = require('./l10n')({
     potDir: 'scrolls/pot',
     apikey
 });
-const fs = require("fs");
-const uncaught = require("uncaught");
-uncaught.start();
-uncaught.addListener(function (error) {
-    console.log('Uncaught error or rejection: ', error);
+
+const lorel10n = require('./l10n')({
+    poDir: 'lore-locale',
+    potDir: 'lore-locale',
+    fromLang: 'en',
+    sourceDir: 'dst',
+    apikey
 });
 
+process
+.on('unhandledRejection', (reason, p) => {
+  console.error(reason, 'Unhandled Rejection at Promise', p);
+  console.error(p);
+})
+.on('uncaughtException', err => {
+  console.error(err, 'Uncaught Exception thrown');
+  console.error(err);
+  process.exit(1);
+});
 const supportedLangs = ["ja", "nb", "da", "ru", "fr", "ko"];
 
-const updatePOFiles = () => Promise.all(supportedLangs.map(lang => scrollsl10n.updatePO(lang)));
+const updatePOFiles = l10nProvider => Promise.all(supportedLangs.map(lang => l10nProvider.updatePO(lang)));
 
-const googleTranslate = () => Promise.all(supportedLangs.map(lang => scrollsl10n.googleTranslatePO(lang)));
+
+const googleTranslate = l10nProvider => Promise.all(supportedLangs.map(lang => l10nProvider.googleTranslatePO(lang)));
 
 const buildScrolls = () => Promise.all(supportedLangs.map(lang => scrollsl10n.buildMDFromPO(lang)));
 
-gulp.task("update-pot", done => scrollsl10n.generatePOTFromMD().then(() => done));
+gulp.task("lore:update-pot", ["gtx:update-locale"]);
 
-gulp.task("update-po-files", done => updatePOFiles().then(() => done));
+gulp.task('lore:update-po-files', done => updatePOFiles(lorel10n).then(() => done()));
 
-gulp.task("google-translate-all", done => googleTranslate().then(() => done));
+gulp.task("lore:google-translate-all", done => googleTranslate(lorel10n).then(() => done()));
 
-gulp.task("build-scrolls", done => buildScrolls().then(() => done));
+gulp.task("scrolls:update-pot", done => scrollsl10n.generatePOTFromMD().then(() => done()));
 
-gulp.task("update-translations", done => {
+gulp.task("scrolls:update-po-files", done => updatePOFiles(scrollsl10n).then(() => done()));
+
+gulp.task("scrolls:google-translate-all", done => googleTranslate(scrollsl10n).then(() => done()));
+
+gulp.task("build-scrolls", done => buildScrolls().then(() => done()));
+
+gulp.task("scrolls:update-translations", done => {
     scrollsl10n.generatePOTFromMD()
-      .then(() => updatePOFiles())
-      .then(() => googleTranslate())
+      .then(() => updatePOFiles(scrollsl10n))
+      .then(() => googleTranslate(scrollsl10n))
       .then(() => buildScrolls())
       .then(() => done());
 });
 
+gulp.task("lore:update-translations", ["gtx:locale-update"], done => {
+    updatePOFiles(lorel10n)
+        .then(() => googleTranslate(lorel10n))
+})
 

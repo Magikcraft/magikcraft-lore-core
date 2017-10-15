@@ -7,13 +7,13 @@ export const name = 'exsultus';
 export const cost = 1;
 export const code = (canon: ICanon) => (power: number | string = 50) => {
 
-    const MSG = canon.MSG;
+    const gettext = canon.gettext;
     const magik = canon.magik;
-    const msg = magik.msg.bind(canon.sender);
+    const msg = canon.msg;
 
     var jumppower = parseFloat(power as string);
     if (isNaN(jumppower)) {
-        return msg(MSG.EXSULTUS_USAGE);
+        return msg(gettext('You need to pass in a number to exsultus!'));
     }
 
     /**

@@ -6,6 +6,7 @@ exports.name = 'incendium';
 exports.cost = 0;
 exports.code = function (canon) { return function (playerName, duration) {
     if (duration === void 0) { duration = DEFAULT_FIRE_DURATION; }
+    var gettext = canon.gettext;
     var toLight = canon.plugin.getServer().getPlayer(playerName);
     var ticks = duration * TICKS_PER_SECOND;
     if (toLight) {
@@ -13,6 +14,6 @@ exports.code = function (canon) { return function (playerName, duration) {
     }
     else {
         // Replace with localisation solution
-        canon.sender.sendMessage("Cannot find player " + playerName);
+        canon.sender.sendMessage(gettext('Cannot find player %s', playerName));
     }
 }; };

@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language: ro\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals = 2; plural = (n !== 1);\n"
+"MIME-Version: 1.0\n"
+
+#: dst/lore/auxilium.js:9
+msgid "You need to give a player name!"
+msgstr ""
+
+#: dst/lore/auxilium.js:13
+msgid "You cannot heal yourself!"
+msgstr ""
+
+#: dst/lore/auxilium.js:18
+msgid "Could not find player %s"
+msgstr ""
+
+#: dst/lore/auxilium.js:22
+msgid "%s healed you!"
+msgstr ""
+
+#: dst/lore/auxilium.js:23
+msgid "You healed %s!"
+msgstr ""
+
+#: dst/lore/celeritate.js:7
+msgid "Celeritate! You now have super speed!"
+msgstr ""
+
+#: dst/lore/declaro.js:26
+msgid "Declaro! you manifest %s"
+msgstr ""
+
+#: dst/lore/exsultus.js:16
+msgid "You need to pass in a number to exsultus!"
+msgstr ""
+
+#: dst/lore/iacta.js:9
+msgid "Player %s not online"
+msgstr ""
+
+#: dst/lore/ianuae.js:12
+msgid "Nowhere to teleport to..."
+msgstr ""
+
+#: dst/lore/incendium.js:17
+msgid "Cannot find player %s"
+msgstr ""
+
+#: dst/lore/memento.js:26
+msgid "I remembered this place as %s"
+msgstr ""
+
+#: dst/lore/memento.js:29
+msgid "I remembered %s as %s"
+msgstr ""
+
+#: dst/lore/radiatum.js:10
+msgid "%s is now radioactive!"
+msgstr ""
+
+#: dst/lore/radiatum.js:14
+msgid "Player %s not online!"
+msgstr ""
+
+#: dst/lore/satio.js:15
+msgid "You manifested an apple!"
+msgstr ""
+
+#: dst/lore/viburnum.js:19
+msgid "Snowball!"
+msgstr ""

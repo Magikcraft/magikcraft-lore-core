@@ -1,22 +1,11 @@
 # The Core Lore for the Magikcraft API
 
-
 ## Localisation Pipeline
 
-1. To generate `.pot` (po template) files, run `gulp update-pot`.
+To update the translations for the scrolls, run `gulp update-translations`.
 
-This converts the English markdown files into `.pot` files in the `scrolls/pot` directory.
+This will extract all strings, obtain machine translations from Google for missing translations, and build localised versions in `scrolls`. Existing modified translations are preserved.
 
-2. Now update the language po-files.
+To update the translations for the lore code, run `gulp gtx:locale-update`.
 
-2. To perform automated translation (this will overwrite any existing translations at this stage), run `gulp google-translate-all`.
-
-This outputs machine translations from Google Cloud into the `scrolls/po/${lang}` directory.
-
-3. To merge these machine translations and build a new set of scrolls for a language, run `gulp build-da` or `gulp build-jp`.
-
-This merges the machine translations into markdown files and places them in the `scrolls` directory.
-
-Note that there is no facility for respecting existing translations at this point in time.
-
-`gulp generate-po-files`
+To convert translations for the lore, run `gulp gtx:locale-build`.

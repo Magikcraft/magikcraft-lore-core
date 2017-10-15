@@ -1,4 +1,5 @@
 declare interface ICanon {
+    gettext: (msg: string, ...args: any[]) => string;
     _darkmagik_: any;
     console: any;
     constant: any;

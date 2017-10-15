@@ -1,7 +1,7 @@
 export const name = 'declaro';
 export const cost = 0;
 export const code = (canon: ICanon) => function (item: string) {
-    const MSG = canon.MSG;
+    const gettext = canon.gettext;
 
     /**
      * This can be extended to allow different things to be manifest
@@ -24,7 +24,7 @@ export const code = (canon: ICanon) => function (item: string) {
         const ItemStack = Java.type("org.bukkit.inventory.ItemStack");
         const thing = new ItemStack(MATERIAL[item]);
         canon.sender.getInventory().addItem(thing);
-        canon.magik.msg(MSG.DECLARO);
+        canon.magik.msg(gettext('Declaro! you manifest %s', item));
     };
 
     const thing = theThing(item);
