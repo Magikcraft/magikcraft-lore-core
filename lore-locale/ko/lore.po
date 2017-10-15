@@ -5,7 +5,7 @@ msgstr ""
 "POT-Creation-Date: \n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
-"Language: ru\n"
+"Language: ko\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,68 +14,68 @@ msgstr ""
 
 #: dst/lore/auxilium.js:9
 msgid "You need to give a player name!"
-msgstr ""
+msgstr "당신은 선수 이름을 제공해야합니다!"
 
 #: dst/lore/auxilium.js:13
 msgid "You cannot heal yourself!"
-msgstr ""
+msgstr "너 스스로 치유 할 수 없어!"
 
 #: dst/lore/auxilium.js:18
 msgid "Could not find player %s"
-msgstr ""
+msgstr "플레이어  %s을 (를) 찾을 수 없습니다."
 
 #: dst/lore/auxilium.js:22
 msgid "%s healed you!"
-msgstr ""
+msgstr " %s이 (가) 당신을 치료했습니다!"
 
 #: dst/lore/auxilium.js:23
 msgid "You healed %s!"
-msgstr ""
+msgstr "당신은  %s를 치료했습니다!"
 
 #: dst/lore/celeritate.js:7
 msgid "Celeritate! You now have super speed!"
-msgstr ""
+msgstr "Celeritate! 당신은 지금 최고 속도가 있습니다!"
 
 #: dst/lore/declaro.js:26
 msgid "Declaro! you manifest %s"
-msgstr ""
+msgstr "Declaro! 당신은  %s를 나타냅니다."
 
 #: dst/lore/exsultus.js:16
 msgid "You need to pass in a number to exsultus!"
-msgstr ""
+msgstr "exsultus에 번호를 전달해야합니다!"
 
 #: dst/lore/iacta.js:9
 msgid "Player %s not online"
-msgstr ""
+msgstr "플레이어  %s 님이 온라인 상태가 아닙니다."
 
 #: dst/lore/ianuae.js:12
 msgid "Nowhere to teleport to..."
-msgstr ""
+msgstr "텔레포트 할 곳이 ..."
 
 #: dst/lore/incendium.js:17
 msgid "Cannot find player %s"
-msgstr ""
+msgstr "플레이어  %s을 (를) 찾을 수 없습니다."
 
 #: dst/lore/memento.js:26
 msgid "I remembered this place as %s"
-msgstr ""
+msgstr "이 장소를  %s (으)로 기억하고 있습니다."
 
 #: dst/lore/memento.js:29
 msgid "I remembered %s as %s"
-msgstr ""
+msgstr " %s을  %s (으)로 기억했습니다."
 
 #: dst/lore/radiatum.js:10
 msgid "%s is now radioactive!"
-msgstr ""
+msgstr " %s이 (가) 이제 방사성입니다!"
 
 #: dst/lore/radiatum.js:14
 msgid "Player %s not online!"
-msgstr ""
+msgstr "플레이어  %s 님이 온라인 상태가 아닙니다!"
 
 #: dst/lore/satio.js:15
 msgid "You manifested an apple!"
-msgstr ""
+msgstr "사과를 드러내 셨습니다!"
 
 #: dst/lore/viburnum.js:19
 msgid "Snowball!"
-msgstr ""
+msgstr "스노볼!"

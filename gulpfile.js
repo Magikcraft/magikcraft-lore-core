@@ -4,7 +4,7 @@ var pipeline = require('promise-sequence/lib/pipeline');
 
 const TranslationTasks = require('gettext-js/lib/build/tasks').default;
 const sourceJs = 'dst/lore/*.js';
-const localeMainFile = 'lore-locale/template.pot';
+const localeMainFile = 'lore-locale/lore.pot';
 const sourceLocale = 'lore-locale/*.po';
 const destLocale = 'dst/locale';
 const gettextJsTasks = new TranslationTasks(gulp, sourceJs, localeMainFile, sourceLocale, destLocale);

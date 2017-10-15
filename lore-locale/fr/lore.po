@@ -26,11 +26,11 @@ msgstr "Impossible de trouver le lecteur %s"
 
 #: dst/lore/auxilium.js:22
 msgid "%s healed you!"
-msgstr "%s vous a guéri!"
+msgstr " %s vous a guéri!"
 
 #: dst/lore/auxilium.js:23
 msgid "You healed %s!"
-msgstr "Vous avez guéri% s!"
+msgstr "Vous avez guéri %s!"
 
 #: dst/lore/celeritate.js:7
 msgid "Celeritate! You now have super speed!"
@@ -46,7 +46,7 @@ msgstr "Vous devez passer un numéro à exsultus!"
 
 #: dst/lore/iacta.js:9
 msgid "Player %s not online"
-msgstr "Le joueur% s n'est pas en ligne"
+msgstr "Le joueur %s n'est pas en ligne"
 
 #: dst/lore/ianuae.js:12
 msgid "Nowhere to teleport to..."
@@ -66,7 +66,7 @@ msgstr "Je me suis souvenu de %s comme %s"
 
 #: dst/lore/radiatum.js:10
 msgid "%s is now radioactive!"
-msgstr "%s est maintenant radioactif!"
+msgstr " %s est maintenant radioactif!"
 
 #: dst/lore/radiatum.js:14
 msgid "Player %s not online!"

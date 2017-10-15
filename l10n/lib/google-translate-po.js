@@ -63,9 +63,6 @@ function translate(items, toLang, fromLang = "en") {
 					originalText: item.msgid
 				});
 			}
-			console.log(item.msgid);
-			console.log(fromLang);
-			console.log(toLang);
 			googleTranslate.translate(item.msgid, fromLang, toLang, _cb);
 		}
 
