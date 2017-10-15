@@ -8,7 +8,7 @@ const scrollsl10n = require('./l10n')({
 });
 const fs = require("fs");
 
-const supportedLangs = ["ja", "nb", "da", "ru"];
+const supportedLangs = ["ja", "nb", "da", "ru", "fr"];
 
 const updatePOFiles = () => Promise.all(supportedLangs.map(lang => scrollsl10n.updatePO(lang)));
 
