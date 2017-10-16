@@ -24,7 +24,7 @@ export const code = (canon: ICanon) => function (item: string) {
         const ItemStack = Java.type("org.bukkit.inventory.ItemStack");
         const thing = new ItemStack(MATERIAL[item]);
         canon.sender.getInventory().addItem(thing);
-        canon.magik.msg(gettext('Declaro! you manifest %s', item));
+        canon.msg(gettext('Declaro! you manifest %s', item));
     };
 
     const thing = theThing(item);

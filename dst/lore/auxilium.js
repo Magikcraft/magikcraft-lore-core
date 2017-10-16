@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.name = 'auxilium';
 exports.cost = 0;
 exports.code = function (canon) { return function (playerName) {
-    var msg = canon.magik.msg;
+    var msg = canon.msg;
     var gettext = canon.gettext;
     if (typeof playerName === "undefined") {
         msg(gettext('You need to give a player name!'));

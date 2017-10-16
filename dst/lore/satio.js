@@ -9,7 +9,7 @@ exports.code = function (canon) { return function (playerName) {
         var ItemStack = Java.type("org.bukkit.inventory.ItemStack");
         var thing = new ItemStack(MATERIAL[item]);
         canon.sender.getInventory().addItem(thing);
-        canon.magik.msg('You got an apple'); // @TODO: localised message
+        canon.msg('You got an apple'); // @TODO: localised message
     };
     manifest('APPLE');
     canon.msg(gettext('You manifested an apple!'));

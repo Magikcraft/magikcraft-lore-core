@@ -1,7 +1,7 @@
 export const name = 'auxilium';
 export const cost = 0;
 export const code = (canon: ICanon) => (playerName: string) => {
-    var msg = canon.magik.msg;
+    var msg = canon.msg;
     var gettext = canon.gettext;
 
     if (typeof playerName === "undefined") {
