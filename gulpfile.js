@@ -53,7 +53,7 @@ const buildLocalisedScrolls = () => Promise.all(supportedLangs.map(lang => scrol
 
 const lore_po2json = () => gulp.src(['lore-locale/**/*.po'])
 		.pipe(po2json())
-		.pipe(gulp.dest('dst/translations/'));
+		.pipe(gulp.dest('translations/'));
 
 // The complete localisation task for the scrolls
 gulp.task("scrolls:update-translations", done =>
