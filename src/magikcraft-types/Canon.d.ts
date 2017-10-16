@@ -6,7 +6,6 @@ declare interface ICanon {
     displayLocalMsg: (msg: string, ...args: any[]) => void;
     globalLocale: string;
     http: any;
-    localiseMsg: (msg: string, ...args: any[]) => string;
     log: any;
     magik: any;
     MSG: any;
