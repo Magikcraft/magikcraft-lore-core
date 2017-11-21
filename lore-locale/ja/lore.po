@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language: ja\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals = 2; plural = (n !== 1);\n"
+"MIME-Version: 1.0\n"
+
+#: dst/lore/auxilium.js:9
+msgid "You need to give a player name!"
+msgstr "あなたはプレイヤーの名前を与える必要があります！"
+
+#: dst/lore/auxilium.js:13
+msgid "You cannot heal yourself!"
+msgstr "あなたは自分自身を癒すことはできません！"
+
+#: dst/lore/auxilium.js:18
+msgid "Could not find player %s"
+msgstr "プレーヤー％sを見つかりませんでした"
+
+#: dst/lore/auxilium.js:22
+msgid "%s healed you!"
+msgstr "あなたを癒しました！"
+
+#: dst/lore/auxilium.js:23
+msgid "You healed %s!"
+msgstr "あなたは％sを癒しました！"
+
+#: dst/lore/celeritate.js:7
+msgid "Celeritate! You now have super speed!"
+msgstr "Celeritate！今あなたは超スピードを持っています！"
+
+#: dst/lore/declaro.js:26
+msgid "Declaro! you manifest %s"
+msgstr "デクラロ！あなたは％sを明らかにする"
+
+#: dst/lore/exsultus.js:16
+msgid "You need to pass in a number to exsultus!"
+msgstr "exsultusに番号を渡す必要があります！"
+
+#: dst/lore/iacta.js:9
+msgid "Player %s not online"
+msgstr "プレーヤー％sはオンラインではありません"
+
+#: dst/lore/ianuae.js:12
+msgid "Nowhere to teleport to..."
+msgstr "どこにもテレポートしません..."
+
+#: dst/lore/incendium.js:17
+msgid "Cannot find player %s"
+msgstr "プレーヤー％sが見つかりません"
+
+#: dst/lore/memento.js:26
+msgid "I remembered this place as %s"
+msgstr "私はこの場所を％sとして記憶していました"
+
+#: dst/lore/memento.js:29
+msgid "I remembered %s as %s"
+msgstr "私は％sを％sとして思い出しました"
+
+#: dst/lore/radiatum.js:10
+msgid "%s is now radioactive!"
+msgstr "％sは現在放射能です！"
+
+#: dst/lore/radiatum.js:14
+msgid "Player %s not online!"
+msgstr "プレーヤー％sはオンラインではありません！"
+
+#: dst/lore/satio.js:15
+msgid "You manifested an apple!"
+msgstr "あなたはリンゴを明らかにしました！"
+
+#: dst/lore/viburnum.js:19
+msgid "Snowball!"
+msgstr "スノーボール！"

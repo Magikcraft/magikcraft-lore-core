@@ -4,4 +4,4 @@
  */
 export declare const name = "exsultus";
 export declare const cost = 1;
-export declare const code: (canon: ICanon) => (power?: string | number) => any;
+export declare const code: (canon: ICanon) => (power?: string | number) => void;

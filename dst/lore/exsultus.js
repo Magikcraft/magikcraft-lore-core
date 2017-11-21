@@ -8,12 +8,12 @@ exports.name = 'exsultus';
 exports.cost = 1;
 exports.code = function (canon) { return function (power) {
     if (power === void 0) { power = 50; }
-    var MSG = canon.MSG;
+    var gettext = canon.gettext;
     var magik = canon.magik;
-    var msg = magik.msg.bind(canon.sender);
+    var msg = canon.msg;
     var jumppower = parseFloat(power);
     if (isNaN(jumppower)) {
-        return msg(MSG.EXSULTUS_USAGE);
+        return msg(gettext('You need to pass in a number to exsultus!'));
     }
     /**
      * The range of jumppower is -100% to 100%. Values less than zero cause a downward velocity. Values above 0 cause an upward velocity
@@ -26,7 +26,7 @@ exports.code = function (canon) { return function (power) {
      */
     var jumpPowerScalingFactor = 100;
     var BukkitVelocityScaleFactor = 3.9; // Max valid velocity
-    var jumpVelocity = (jumppower / 100) * jumpPowerScalingFactor * BukkitVelocityScaleFactor;
+    var jumpVelocity = (jumppower / 100) * (jumpPowerScalingFactor / 100) * BukkitVelocityScaleFactor;
     var player = canon.sender;
     var yDeltaV = jumpVelocity;
     var xDeltaV = 0.0;

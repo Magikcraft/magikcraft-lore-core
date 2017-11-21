@@ -12,7 +12,7 @@ export const name = 'memento';
 export const cost = 0;
 export const undecorated = true;
 export const code = (canon: ICanon): ILocalStorage => {
-    const MSG = canon.MSG;
+    const gettext = canon.gettext;
     const magik = magikcraft.io;
     const defaultKey = 'memory.default';
 
@@ -31,9 +31,9 @@ export const code = (canon: ICanon): ILocalStorage => {
         magik.durablePlayerMap.put(key, value);
 
         if (value instanceof Java.type("org.bukkit.Location")) {
-            canon.displayLocalMsg(`I remembered this place as ${key}`);
+            canon.msg(gettext('I remembered this place as %s', key));
         } else {
-            canon.displayLocalMsg(`I remembered ${value} as ${key}`);
+            canon.msg(gettext('I remembered %s as %s' ,value, key));
         }
     }
     const _localStorage: ILocalStorage = (_setItem as any);

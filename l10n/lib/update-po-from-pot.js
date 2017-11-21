@@ -19,7 +19,7 @@ function main({ toLang, poDir, potDir }) {
     fs.mkdirpSync(poFileDir);
   }
   return Promise.all(
-    potFiles.map(potFileName => {
+    potFiles.filter(file => file.indexOf('.pot') !== -1).map(potFileName => {
       return new Promise((resolve, reject) => {
         const potFile = `${potDir}/${potFileName}`;
         po.load(potFile, pot => {
@@ -46,7 +46,8 @@ function updateLanguageCode(poFilePath, toLang) {
       poFile.headers.Language = `${toLang}`;
       poFile.save(poFilePath, result => resolve(result));
     });
-  });
+  })
+  .catch(err => console.log('updateLanguageCode', err));
 }
 
 function mergePOTWithPO(pot, poFilePath) {
@@ -64,5 +65,6 @@ function mergePOTWithPO(pot, poFilePath) {
       });
       pot.save(poFilePath, result => resolve(result));
     });
-  });
+  })
+  .catch(err => console.log('mergePOTWithPO', err));
 }

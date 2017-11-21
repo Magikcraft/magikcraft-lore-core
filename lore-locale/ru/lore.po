@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language: ru\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals = 2; plural = (n !== 1);\n"
+"MIME-Version: 1.0\n"
+
+#: dst/lore/auxilium.js:9
+msgid "You need to give a player name!"
+msgstr "Вам нужно указать имя игрока!"
+
+#: dst/lore/auxilium.js:13
+msgid "You cannot heal yourself!"
+msgstr "Вы не можете исцелить себя!"
+
+#: dst/lore/auxilium.js:18
+msgid "Could not find player %s"
+msgstr "Не удалось найти игрока %s"
+
+#: dst/lore/auxilium.js:22
+msgid "%s healed you!"
+msgstr " %s исцелил вас!"
+
+#: dst/lore/auxilium.js:23
+msgid "You healed %s!"
+msgstr "Вы исцелили %s!"
+
+#: dst/lore/celeritate.js:7
+msgid "Celeritate! You now have super speed!"
+msgstr "Celeritate! У вас теперь супер скорость!"
+
+#: dst/lore/declaro.js:26
+msgid "Declaro! you manifest %s"
+msgstr "Declaro! вы показываете %s"
+
+#: dst/lore/exsultus.js:16
+msgid "You need to pass in a number to exsultus!"
+msgstr "Вам нужно передать номер exsultus!"
+
+#: dst/lore/iacta.js:9
+msgid "Player %s not online"
+msgstr "Игрок %s не в сети"
+
+#: dst/lore/ianuae.js:12
+msgid "Nowhere to teleport to..."
+msgstr "Некуда телепортироваться ..."
+
+#: dst/lore/incendium.js:17
+msgid "Cannot find player %s"
+msgstr "Не удается найти игрока %s"
+
+#: dst/lore/memento.js:26
+msgid "I remembered this place as %s"
+msgstr "Я помню это место как %s"
+
+#: dst/lore/memento.js:29
+msgid "I remembered %s as %s"
+msgstr "Я помню %s как %s"
+
+#: dst/lore/radiatum.js:10
+msgid "%s is now radioactive!"
+msgstr " %s теперь радиоактивно!"
+
+#: dst/lore/radiatum.js:14
+msgid "Player %s not online!"
+msgstr "Игрок %s не в сети!"
+
+#: dst/lore/satio.js:15
+msgid "You manifested an apple!"
+msgstr "Вы проявили яблоко!"
+
+#: dst/lore/viburnum.js:19
+msgid "Snowball!"
+msgstr "Снежный шар!"

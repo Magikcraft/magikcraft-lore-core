@@ -51,3 +51,13 @@ export const loreToLoad = [
     viburnum,
     volare
 ];
+
+export const stringsToLoad = {
+    "da": "translations/da/lore.json",
+    "es": "translations/es/lore.json",
+    "fr": "translations/fr/lore.json",
+    "ja": "translations/ja/lore.json",
+    "ko": "translations/ko/lore.json",
+    "nb": "translations/nb/lore.json",
+    "ru": "translations/ru/lore.json"
+}

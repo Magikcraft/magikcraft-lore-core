@@ -4,7 +4,7 @@ exports.name = 'memento';
 exports.cost = 0;
 exports.undecorated = true;
 exports.code = function (canon) {
-    var MSG = canon.MSG;
+    var gettext = canon.gettext;
     var magik = magikcraft.io;
     var defaultKey = 'memory.default';
     function getItem(key) {
@@ -23,10 +23,10 @@ exports.code = function (canon) {
         }
         magik.durablePlayerMap.put(key, value);
         if (value instanceof Java.type("org.bukkit.Location")) {
-            canon.displayLocalMsg("I remembered this place as " + key);
+            canon.msg(gettext('I remembered this place as %s', key));
         }
         else {
-            canon.displayLocalMsg("I remembered " + value + " as " + key);
+            canon.msg(gettext('I remembered %s as %s', value, key));
         }
     }
     var _localStorage = _setItem;

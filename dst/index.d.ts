@@ -24,3 +24,12 @@ import * as viburnum from './lore/viburnum';
 import * as volare from './lore/volare';
 export declare const description = "The core Magikcraft API spells";
 export declare const loreToLoad: (typeof aspecto | typeof auxilium | typeof celeritate | typeof declaro | typeof dixit | typeof doNTimes | typeof exmemento | typeof exsultus | typeof fromJSON | typeof hic | typeof iacta | typeof ianuae | typeof incendium | typeof infierno | typeof memento | typeof noxvida | typeof radiatum | typeof random | typeof satio | typeof shakti | typeof stella | typeof toJSON | typeof viburnum | typeof volare)[];
+export declare const stringsToLoad: {
+    "da": string;
+    "es": string;
+    "fr": string;
+    "ja": string;
+    "ko": string;
+    "nb": string;
+    "ru": string;
+};
