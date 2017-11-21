@@ -26,7 +26,7 @@ exports.code = function (canon) { return function (power) {
      */
     var jumpPowerScalingFactor = 100;
     var BukkitVelocityScaleFactor = 3.9; // Max valid velocity
-    var jumpVelocity = (jumppower / 100) * jumpPowerScalingFactor * BukkitVelocityScaleFactor;
+    var jumpVelocity = (jumppower / 100) * (jumpPowerScalingFactor / 100) * BukkitVelocityScaleFactor;
     var player = canon.sender;
     var yDeltaV = jumpVelocity;
     var xDeltaV = 0.0;

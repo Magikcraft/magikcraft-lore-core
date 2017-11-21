@@ -28,7 +28,7 @@ export const code = (canon: ICanon) => (power: number | string = 50) => {
      */
     const jumpPowerScalingFactor = 100;
     const BukkitVelocityScaleFactor = 3.9; // Max valid velocity
-    const jumpVelocity = (jumppower / 100) * jumpPowerScalingFactor * BukkitVelocityScaleFactor;
+    const jumpVelocity = (jumppower / 100) * (jumpPowerScalingFactor / 100) * BukkitVelocityScaleFactor;
 
     const player = canon.sender;
 
