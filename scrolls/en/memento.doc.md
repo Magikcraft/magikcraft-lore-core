@@ -13,7 +13,7 @@ To remember something, use `memento.setItem`:
 ```javascript
 const magik = magikcraft.io;
 
-function remember() {
+function remember_here() {
     const here = magik.hic();
     magik.memento.setItem(here);
 }
@@ -23,7 +23,7 @@ function remember() {
 ```javascript
 const magik = magikcraft.io;
 
-function remember(name){
+function remember_here(name){
     const here = magik.hic();
     magik.memento.setItem(name, here);
 }
