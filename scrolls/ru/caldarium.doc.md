@@ -1,10 +1,11 @@
+
 # Caldarium
 
 `magikcraft.io.caldarium`
 
-Cauldron! This spell mixes ingredients to produce new magic!
+Котла! Это заклинание смешивает ингредиенты для создания новой магии!
 
-## Example
+## пример
 
 ```javascript
 const magik = magikcraft.io

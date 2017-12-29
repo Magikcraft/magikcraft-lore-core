@@ -1,10 +1,11 @@
-# Caldarium
+
+# 칼 달린
 
 `magikcraft.io.caldarium`
 
-Cauldron! This spell mixes ingredients to produce new magic!
+가마솥! 이 마법은 재료를 혼합하여 새로운 마법을 만듭니다!
 
-## Example
+## 예
 
 ```javascript
 const magik = magikcraft.io
