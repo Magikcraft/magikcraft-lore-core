@@ -29,6 +29,25 @@ msgstr ""
 msgid "You healed %s!"
 msgstr ""
 
+#: dst/lore/caldarium.js:27
+msgid "You need to pass in an array of ingredients"
+msgstr ""
+
+#: dst/lore/caldarium.js:29
+msgid "Not enough ingredients!"
+msgstr ""
+
+#: dst/lore/caldarium.js:33
+msgid "Too many ingredients"
+msgstr ""
+
+#: dst/lore/caldarium.js:57
+msgid "This mixture made a nice soup, but didn't produce any magik!"
+msgstr ""
+
+msgid ""
+msgstr ""
+
 #: dst/lore/celeritate.js:7
 msgid "Celeritate! You now have super speed!"
 msgstr ""

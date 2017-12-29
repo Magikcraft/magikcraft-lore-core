@@ -32,6 +32,22 @@ msgstr " %s helbredet deg!"
 msgid "You healed %s!"
 msgstr "Du helbredet %s!"
 
+#: dst/lore/caldarium.js:27
+msgid "You need to pass in an array of ingredients"
+msgstr "Du må passere i en rekke ingredienser"
+
+#: dst/lore/caldarium.js:29
+msgid "Not enough ingredients!"
+msgstr "Ikke nok ingredienser!"
+
+#: dst/lore/caldarium.js:33
+msgid "Too many ingredients"
+msgstr "For mange ingredienser"
+
+#: dst/lore/caldarium.js:57
+msgid "This mixture made a nice soup, but didn't produce any magik!"
+msgstr "Denne blandingen gjorde en fin suppe, men produserte ikke noen magik!"
+
 #: dst/lore/celeritate.js:7
 msgid "Celeritate! You now have super speed!"
 msgstr "Celeritate! Du har nå super fart!"
