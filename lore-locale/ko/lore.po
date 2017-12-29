@@ -32,6 +32,22 @@ msgstr " %s이 (가) 당신을 치료했습니다!"
 msgid "You healed %s!"
 msgstr "당신은  %s를 치료했습니다!"
 
+#: dst/lore/caldarium.js:27
+msgid "You need to pass in an array of ingredients"
+msgstr "당신은 성분의 배열을 통과해야합니다"
+
+#: dst/lore/caldarium.js:29
+msgid "Not enough ingredients!"
+msgstr "재료가 충분하지 않습니다!"
+
+#: dst/lore/caldarium.js:33
+msgid "Too many ingredients"
+msgstr "성분이 너무 많습니다."
+
+#: dst/lore/caldarium.js:57
+msgid "This mixture made a nice soup, but didn't produce any magik!"
+msgstr "이 혼합물은 좋은 수프를 만들었지 만, 어떤 마술을 생산하지 않았다!"
+
 #: dst/lore/celeritate.js:7
 msgid "Celeritate! You now have super speed!"
 msgstr "Celeritate! 당신은 지금 최고 속도가 있습니다!"

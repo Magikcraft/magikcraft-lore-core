@@ -1,5 +1,6 @@
 import * as aspecto from './lore/aspecto';
 import * as auxilium from './lore/auxilium';
+import * as caldarium from './lore/caldarium';
 import * as celeritate from './lore/celeritate';
 import * as declaro from './lore/declaro';
 import * as dixit from './lore/dixit';
@@ -28,6 +29,7 @@ export const description = "The core Magikcraft API spells";
 export const loreToLoad = [
     aspecto,
     auxilium,
+    caldarium,
     celeritate,
     declaro,
     dixit,

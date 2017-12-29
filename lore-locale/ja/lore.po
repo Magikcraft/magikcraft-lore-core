@@ -32,6 +32,22 @@ msgstr "あなたを癒しました！"
 msgid "You healed %s!"
 msgstr "あなたは％sを癒しました！"
 
+#: dst/lore/caldarium.js:27
+msgid "You need to pass in an array of ingredients"
+msgstr "あなたは成分の配列を渡す必要があります"
+
+#: dst/lore/caldarium.js:29
+msgid "Not enough ingredients!"
+msgstr "十分な成分がありません！"
+
+#: dst/lore/caldarium.js:33
+msgid "Too many ingredients"
+msgstr "成分が多すぎます"
+
+#: dst/lore/caldarium.js:57
+msgid "This mixture made a nice soup, but didn't produce any magik!"
+msgstr "この混合物は素敵なスープを作りましたが、どんなマジックも作りませんでした！"
+
 #: dst/lore/celeritate.js:7
 msgid "Celeritate! You now have super speed!"
 msgstr "Celeritate！今あなたは超スピードを持っています！"

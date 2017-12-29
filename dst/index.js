@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var aspecto = require("./lore/aspecto");
 var auxilium = require("./lore/auxilium");
+var caldarium = require("./lore/caldarium");
 var celeritate = require("./lore/celeritate");
 var declaro = require("./lore/declaro");
 var dixit = require("./lore/dixit");
@@ -28,6 +29,7 @@ exports.description = "The core Magikcraft API spells";
 exports.loreToLoad = [
     aspecto,
     auxilium,
+    caldarium,
     celeritate,
     declaro,
     dixit,
