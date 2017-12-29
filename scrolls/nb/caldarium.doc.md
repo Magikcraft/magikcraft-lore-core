@@ -1,10 +1,11 @@
-# Caldarium
+
+# caldarium
 
 `magikcraft.io.caldarium`
 
-Cauldron! This spell mixes ingredients to produce new magic!
+Kjele! Denne staven blander ingredienser for å produsere ny magi!
 
-## Example
+## Eksempel
 
 ```javascript
 const magik = magikcraft.io
