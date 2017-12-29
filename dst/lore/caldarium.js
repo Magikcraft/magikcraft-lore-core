@@ -23,9 +23,9 @@ exports.code = function (canon) { return function (ingredients) {
         celeritate: "magik.celeritate"
     };
     function mix(ingredients) {
-        if (typeof ingredients == "string")
+        if (typeof ingredients == "string" || typeof ingredients == "number" || !ingredients)
             return canon.msg(gettext("You need to pass in an array of ingredients"));
-        if (!ingredients || ingredients.toString() !== "[object Array]" || ingredients.length < 3) {
+        if (ingredients.length < 3) {
             canon.msg(gettext("Not enough ingredients!"));
             return false;
         }
