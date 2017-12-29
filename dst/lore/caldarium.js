@@ -33,10 +33,11 @@ exports.code = function (canon) { return function (ingredients) {
             canon.msg(gettext("Too many ingredients"));
             return false;
         }
+        var normalise = function (str) { return str.split(" ").join("").toUpperCase(); };
         var INGREDIENTS = [];
-        INGREDIENTS.push(ingredients[0].toUpperCase());
-        INGREDIENTS.push(ingredients[1].toUpperCase());
-        INGREDIENTS.push(ingredients[2].toUpperCase());
+        INGREDIENTS.push(normalise(ingredients[0]));
+        INGREDIENTS.push(normalise(ingredients[1]));
+        INGREDIENTS.push(normalise(ingredients[2]));
         var cauldron = items[INGREDIENTS[0]] | items[INGREDIENTS[1]] | items[INGREDIENTS[2]];
         var results = {};
         var incendium = items.LIZARDEYES | items.UNICORNTEARS | items.DRAGONSCALES;
@@ -61,6 +62,6 @@ exports.code = function (canon) { return function (ingredients) {
     }
     var result = mix(ingredients);
     if (result) {
-        canon.msg(gettext("You produced a new spell: " + result));
+        canon.msg(gettext("You produced a new magik word: " + result));
     }
 }; };

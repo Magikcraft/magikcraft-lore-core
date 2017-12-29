@@ -36,10 +36,12 @@ export const code = (canon: ICanon) => (ingredients: string[]) => {
             return false;
         }
 
-        var INGREDIENTS = [];
-        INGREDIENTS.push(ingredients[0].toUpperCase());
-        INGREDIENTS.push(ingredients[1].toUpperCase());
-        INGREDIENTS.push(ingredients[2].toUpperCase());
+        const normalise = (str: string) => str.split(" ").join("").toUpperCase()
+
+        const INGREDIENTS = [];
+        INGREDIENTS.push(normalise(ingredients[0]));
+        INGREDIENTS.push(normalise(ingredients[1]));
+        INGREDIENTS.push(normalise(ingredients[2]));
 
         const cauldron = items[INGREDIENTS[0]] | items[INGREDIENTS[1]] | items[INGREDIENTS[2]];
 
@@ -70,6 +72,6 @@ export const code = (canon: ICanon) => (ingredients: string[]) => {
     const result = mix(ingredients);
 
     if (result) {
-        canon.msg(gettext(`You produced a new spell: ${result}`));
+        canon.msg(gettext(`You produced a new magik word: ${result}`));
     }
 };
