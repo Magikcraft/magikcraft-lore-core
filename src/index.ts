@@ -29,7 +29,7 @@ export const description = "The core Magikcraft API spells";
 export const loreToLoad = [
     aspecto,
     auxilium,
-    caldarium,
+ //   caldarium,
     celeritate,
     declaro,
     dixit,
