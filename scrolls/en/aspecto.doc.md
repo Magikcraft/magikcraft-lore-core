@@ -9,7 +9,7 @@ Returns the location where you are looking.
 ```javascript
 const magik = magikcraft.io;
 
-function there() {
+function main() {
     const whereImLooking = magik.aspecto();
     magik.dixit(whereImLooking);
 }
