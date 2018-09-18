@@ -9,7 +9,7 @@ Print a message to the player's console.
 ```javascript
 const magik = magikcraft.io;
 
-function hello(playername) {
+function main(playername) {
     const myName = magik.getSender().getName();
     magik.dixit(`Hello from ${myName}`, playername);
     magik.dixit(`You just said 'Hello' to ${playername}`);
