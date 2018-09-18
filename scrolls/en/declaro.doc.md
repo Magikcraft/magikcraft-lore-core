@@ -9,7 +9,7 @@ Manifest an item.
 ```javascript
 const magik = magikcraft.io;
 
-function magik_carpet() {
+function main() {
     magik.declaro('elytra');
 }
 ```
