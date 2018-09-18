@@ -9,7 +9,7 @@ Heal a friend. This spell cannot be used to heal yourself.
 ```javascript
 const magik = magikcraft.io;
 
-function healFriend(playerName) {
+function main(playerName) {
     magik.auxilium(playerName);
 }
 ```
