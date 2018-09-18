@@ -9,7 +9,7 @@ Accelerate! Makes you travel at warp speed.
 ```javascript
 const magik = magikcraft.io;
 
-function healFriend(playerName) {
-    magik.auxilium(playerName);
+function speed() {
+    magik.celeritate();
 }
 ```
