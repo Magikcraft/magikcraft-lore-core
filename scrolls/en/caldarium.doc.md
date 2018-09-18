@@ -9,7 +9,7 @@ Cauldron! This spell mixes ingredients to produce new magic!
 ```javascript
 const magik = magikcraft.io
 
-function pot() {
+function main() {
     const ingredients = []
     ingredients.push("PUT_INGREDIENT_HERE")
     ingredients.push("PUT_ANOTHER_INGREDIENT_HERE")
