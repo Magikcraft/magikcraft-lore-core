@@ -9,7 +9,7 @@ Repeat a function multiple times.
 ```javascript
 const magik = magikcraft.io;
 
-function echo(msg) {
+function main(msg) {
     magik.doNTimes(() => magik.dixit(msg), 3);
 }
 ```
@@ -17,7 +17,7 @@ function echo(msg) {
 ```javascript
 const magik = magikcraft.io;
 
-function fireworks() {
+function main() {
     function firework() {
         const there = magik.aspecto();
         magik.stella(there);
